@@ -272,13 +272,13 @@ const Register = () => {
             <b>Register</b>
           </button>
 
-          <button
-            className="btn cancel-btn w-75 mb-3 mx-auto p-2"
+          <div
+            className=" cancel-btn w-75 mb-3 mx-auto p-2"
             type="button"
             onClick={handleBackToLogin}
           >
-            <b>Back to login</b>
-          </button>
+            <a href="./Login">Back To Login</a>
+          </div>
         </div>
 
         {/* Right side background image */}

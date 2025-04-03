@@ -1,11 +1,16 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import Carousel from "./Carousel";
+import Card from "./Card";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import Pagination from "react-bootstrap/Pagination";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import DetailBody from "../components/DetailBody"
-const ProductDetail = () => {
-    const { id } = useParams();
+const Displayproduct = () => {
+    const productImages = [
+        "Products/inner_1.jpg",
+        "Products/inner2.jpg",
+        "Products/inner_3.jpg",
+    ];
+
     const products = [
         {
             id: 1,
@@ -72,20 +77,37 @@ const ProductDetail = () => {
         }
     ];
 
-    const product = products.find((product) => product.id === parseInt(id));
-
-
     return (
-        <>
-            <Header />
-            {product ? (
-                <DetailBody product={product} />
-            ) : (
-                <p>Product not found.</p>
-            )}
-            <Footer />
-        </>
-    );
-}
+        <div className="col-lg-6 col-xl-6 col-sm-12 col-md-12 mb-4 d-flex flex-column" style={{ backgroundColor: "white", zIndex: 10 }}>
+            <Carousel images={productImages} />
 
-export default ProductDetail;
+            <div className="d-flex flex-column flex-grow-1">
+                <div className="row flex-grow-1 mb-3">
+                    {products.map((product) => (
+                        <div className="col-md-4 col-sm-6 mb-3" key={product.id}>
+                            <Card
+                                id={product.id}
+                                image={product.image}
+                                title={product.title}
+                                price={product.price}
+                                description={product.description}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                <div className="d-flex justify-content-center mt-auto">
+                    <Pagination>
+                        <Pagination.Prev />
+                        <Pagination.Item active>{1}</Pagination.Item>
+                        <Pagination.Item>{2}</Pagination.Item>
+                        <Pagination.Item>{3}</Pagination.Item>
+                        <Pagination.Next />
+                    </Pagination>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Displayproduct;

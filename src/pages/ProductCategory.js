@@ -1,8 +1,10 @@
 import React from "react";
 import Header from "../components/Header";
-import ProductCategoryBody from "../components/products/Product_category_body";
+import ProductCategoryBody from "../components/products/ProductCategoryBody";
 import Footer from "../components/Footer";
-const Product_category = () => {
+import '../index.css';
+
+const ProductCategory = () => {
   return (
     <>
       <Header />
@@ -12,4 +14,4 @@ const Product_category = () => {
   );
 };
 
-export default Product_category;
+export default ProductCategory;

@@ -16,18 +16,18 @@ const Login = () => {
           <img src={logo} className="logo mb-4" alt="Decor Dream logo" />
 
           <input
-            className="form-control w-75 mb-3 mx-auto shadow"
+            className="form-control w-75 mb-3 mx-auto shadow p-2"
             type="text"
             id="contactInfo"
             name="contactInfo"
-            placeholder="Enter email or phone number"
+            placeholder="  Enter Your Username"
             required
           />
 
           <input
-            className="form-control w-75 mb-3 mx-auto"
+            className="form-control w-75 mb-3 mx-auto p-2"
             type="password"
-            placeholder="Password"
+            placeholder="  Password"
             required
           />
 
@@ -45,7 +45,7 @@ const Login = () => {
                 <a href="#">Forgot password?</a>
               </div>
               <div
-                className="create-account text-right col-6"
+                className="create-account text-right col-6" style={{ textAlign: "right" }}
               >
                 <a href="./Register">Create new account </a>
               </div></div>

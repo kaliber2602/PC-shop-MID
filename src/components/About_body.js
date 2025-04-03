@@ -38,7 +38,7 @@ const About_body = () => {
                 </p>
               </div>
               <div className="card-footer text-left">
-                <button className="btn btn-primary rounded">Learn More</button>
+
               </div>
             </div>
           </div>
@@ -55,9 +55,7 @@ const About_body = () => {
                 </p>
               </div>
               <div className="card-footer text-left">
-                <button className="btn btn-primary rounded">
-                  Explore Our Values
-                </button>
+
               </div>
             </div>
           </div>
