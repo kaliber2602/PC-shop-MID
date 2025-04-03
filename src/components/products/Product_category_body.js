@@ -19,16 +19,6 @@ const ProductCategoryBody = () => {
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
-  const [rating, setRating] = useState(0);
-
-  // Catch Rating value
-  const handleRating = (rate) => {
-    setRating(rate);
-  };
-  // Optinal callback functions
-  const onPointerEnter = () => console.log("Enter");
-  const onPointerLeave = () => console.log("Leave");
-  const onPointerMove = (value, index) => console.log(value, index);
 
   return (
     <div>
