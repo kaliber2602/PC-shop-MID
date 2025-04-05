@@ -7,11 +7,15 @@ import Login from "./components/Login&register/Login";
 import Register from "./components/Login&register/Register";
 import ProductCategory from "./pages/ProductCategory"
 import ProductDetail from "./pages/ProductDetail";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 function App() {
 
   return (
     <>
       <Router>
+        <ScrollToTopButton />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} style={"bg-muted"} />
           <Route path="/about" element={<About />} />

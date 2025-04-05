@@ -1,7 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-const Menu = () => {
+
+const Menu = ({ onSelectCategory }) => {
+  const handleCategoryClick = (category) => {
+    onSelectCategory(category);
+  };
   return (
     <div className="col-lg-2 col-xl-2 col-sm-12 col-md-12 mb-4 menu">
       <h1
@@ -21,24 +25,43 @@ const Menu = () => {
       {menuItems.map((item, index) => (
         <div key={index} className="dropdown show p-2 rounded mb-0">
           <a
-            className="btn btn-secondary col-12 dropdown-toggle"
+            className={`btn btn-secondary col-12 ${item.subItems ? "dropdown-toggle" : ""}`}
             href="#"
             role="button"
             id={`dropdownMenuLink-${index}`}
-            data-bs-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
+            data-bs-toggle={item.subItems ? "dropdown" : ""}
+            aria-haspopup={item.subItems ? "true" : ""}
+            aria-expanded={item.subItems ? "false" : ""}
+            onClick={(e) => {
+              e.preventDefault();
+              if (!item.subItems) handleCategoryClick(item.title);
+            }}
+            style={{
+              whiteSpace: "normal",
+              wordWrap: "break-word",
+              overflowWrap: "break-word"
+            }}
           >
             {item.title}
+            {item.subItems && (
+              <span className="ms-2">
+                <i className="bi bi-chevron-down"></i>
+              </span>
+            )}
           </a>
 
           {item.subItems && (
-            <div
-              className="dropdown-menu"
-              aria-labelledby={`dropdownMenuLink-${index}`}
-            >
+            <div className="dropdown-menu" aria-labelledby={`dropdownMenuLink-${index}`}>
               {item.subItems.map((subItem, subIndex) => (
-                <a key={subIndex} className="dropdown-item" href="#">
+                <a
+                  key={subIndex}
+                  className="dropdown-item"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleCategoryClick(subItem);
+                  }}
+                >
                   {subItem}
                 </a>
               ))}
@@ -48,38 +71,39 @@ const Menu = () => {
       ))}
     </div>
   );
+
 };
 
 const menuItems = [
   { title: "PC & Laptop", subItems: ["PC", "Laptop"] },
   {
-    title: "Linh kiện PC",
+    title: "PC Components",
     subItems: [
       "CPU",
-      "GPU (Card đồ họa)",
+      "GPU (Graphics Card)",
       "RAM",
-      "SSD & HDD (Ổ cứng)",
-      "PSU (Nguồn máy tính)",
-      "Bo mạch chủ (Motherboard)",
-      "Tản nhiệt (Cooling Solutions)",
+      "SSD & HDD (Storage)",
+      "PSU (Power Supply Unit)",
+      "Motherboard",
+      "Cooling Solutions",
     ],
   },
-  { title: "Màn hình (Monitors)" },
+  { title: "Monitors" },
   {
-    title: "Bàn phím cơ & Phụ kiện",
-    subItems: ["Action", "Another action", "Something else here"],
+    title: "Mechanical Keyboards & Accessories",
+    subItems: ["Mechanical Keyboards", "Keycap Sets"],
   },
   {
     title: "Mice & Mousepads",
-    subItems: ["Action", "Another action", "Something else here"],
+    subItems: ["Gaming Mice", "Mousepads"],
   },
   {
     title: "Headphones & Speakers",
-    subItems: ["Action", "Another action", "Something else here"],
+    subItems: ["Headphones", "Speakers"],
   },
   {
-    title: "Gaming Chairs & Desks",
-    subItems: ["Action", "Another action", "Something else here"],
+    title: "Chairs & Desks",
+    subItems: ["Chairs", "Desks"],
   },
   {
     title: "Other Accessories",
@@ -93,3 +117,4 @@ const menuItems = [
 ];
 
 export default Menu;
+

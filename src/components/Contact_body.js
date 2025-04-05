@@ -51,12 +51,7 @@ const Contact_body = () => {
           </div>
           <div className="col-lg-6">
             <div className="map shadow" style={{ height: "100%" }}>
-              <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=New+York"
-                allowFullScreen
-                title="Google Map"
-                style={{ width: "100%", height: "100%", border: "0" }}
-              ></iframe>
+              <img src="/contact.png" alt="Contact" style={{ width: "100%", height: "100%" }} />
             </div>
           </div>
         </div>

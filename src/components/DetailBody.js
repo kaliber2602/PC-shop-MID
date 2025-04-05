@@ -5,12 +5,9 @@ import LeftSidebar from "./products/LeftSidebar";
 import Carousel from "./products/Carousel";
 
 import "../index.css";
+
 const DetailBody = ({ product }) => {
-    const images = [
-        "/item_info/torras1.jpg",
-        "/item_info/torras2.jpg",
-        "/item_info/torras3.jpg"
-    ];
+    const images = product.list_anh || [];
 
     return (
         <section className="container-fluid">
@@ -42,7 +39,7 @@ const DetailBody = ({ product }) => {
                         <div className="container col-md-7">
                             {/* Thông tin sản phẩm */}
                             <h3>{product.title}</h3>
-                            <p>{product.description}</p>
+                            <p><strong>Category:</strong> {product.category}</p>
                             <p>
                                 <span className="text-danger h1">${product.price}</span>
                             </p>
@@ -79,7 +76,7 @@ const DetailBody = ({ product }) => {
                 {/* Right Sidebar */}
                 <RightSidebar />
             </div>
-        </section >
+        </section>
     );
 };
 
