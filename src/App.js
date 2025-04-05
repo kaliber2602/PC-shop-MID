@@ -7,6 +7,7 @@ import Login from "./components/Login&register/Login";
 import Register from "./components/Login&register/Register";
 import ProductCategory from "./pages/ProductCategory"
 import ProductDetail from "./pages/ProductDetail";
+import CartPopup from "./components/Cart_popup.js";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
         </Routes>
+      <CartPopup/ >
       </Router>
     </>
   );
