@@ -42,6 +42,7 @@ const Card = ({ id, image, title, price, category }) => {
               fontSize: "20px",
               fontWeight: "bold",
               margin: 0,
+              textTransform: "Uppercase"
             }}
           >
             <b>{title}</b>

@@ -6,18 +6,68 @@ const stylesData = [
   {
     name: "minimalist",
     shortDescription: "A clean and simple setup.",
-    longDescription:
-      "The minimalist setup focuses on simplicity, removing distractions for a more productive workspace. It features clean lines, neutral colors, and essential elements only.",
+    longDescription: `
+  Love clarity, simplicity, and a workspace that helps you focus? The **Minimalist Theme** is all about  
+  clean lines, neutral tones, and functional design—creating a calm, distraction-free environment  
+  that boosts productivity and peace of mind.
+
+  🌿 Clean tones & natural light:  
+  Stick to a palette of white, grey, and soft wood. Pair it with natural daylight or warm-toned lamps  
+  like the Yeelight Smart Lamp D2 for a cozy but clear ambiance.
+
+  🧩 Thoughtful, space-saving decor:  
+  Use hidden cable organizers, floating shelves, and a slim monitor arm to keep everything tidy.  
+  A small bonsai or a ceramic cup adds just the right touch of personality without the clutter.
+
+  🖥 Essential, not excessive tech:  
+  Choose one main monitor, a minimalist keyboard like the Keychron K3, and wireless accessories  
+  to maintain clean lines across your desk. A compact speaker or a pair of studio earbuds completes the setup.
+
+  🪑 Sleek yet comfortable workspace:  
+  A neutral ergonomic chair, clean desk mat, and subtle drawer system keep your space practical  
+  without visual noise.
+
+  🚀 Who is this style for?  
+  Ideal for minimalists, deep thinkers, writers, and those who value calm, mindful work environments  
+  with zero distractions.
+
+  Let your space breathe. Redefine your productivity with the **Minimalist Theme**.
+`,
+
     cardImage: "/Home_image/minimalist.jpg",
-    descriptionImage: "/images/minimalist_details.jpg",
+    descriptionImage: "/Home_image/minimalist_modal.jpg",
   },
   {
     name: "modern",
     shortDescription: "A stylish and sleek workspace.",
-    longDescription:
-      "The modern setup emphasizes elegance with modern furniture, sleek lighting, and an efficient workspace layout.",
+    longDescription: `
+  Want a workspace that reflects innovation, confidence, and sleek design? The **Modern Theme** blends  
+  cutting-edge technology with sharp aesthetics, giving you a professional, stylish, and performance-driven environment.
+
+  🖤 Sleek color palette & contrast:  
+  Monochrome tones with metallic or matte finishes make everything feel curated. Use directional lighting  
+  like the BenQ ScreenBar or Govee Desk Lamp to highlight your setup with precision.
+
+  🖼 Sophisticated & sharp decor:  
+  Incorporate framed abstract prints, a geometric desk clock, or a minimalist sculpture  
+  to give your space a gallery-inspired edge.
+
+  💻 Smart, high-function gear:  
+  Think dual monitors, a 75% mechanical keyboard, a wireless charging pad, and noise-canceling headphones.  
+  Combine function and form with tools like the Logitech MX Keys or the Elgato Stream Deck.
+
+  🪑 Ergonomic meets executive:  
+  Go for a premium chair like the Herman Miller Sayl or Secretlab Neue, matched with a motorized  
+  sit-stand desk and polished aluminum accessories.
+
+  🚀 Who is this style for?  
+  Perfect for professionals, content creators, and anyone who wants their desk to look as smart as it performs.
+
+  Shape your workspace with intention and innovation. Choose the **Modern Theme**.
+`,
+
     cardImage: "/Home_image/modern.jpg",
-    descriptionImage: "/images/modern_details.jpg",
+    descriptionImage: "/Home_image/modern_modal.png",
   },
   {
     name: "gaming",
@@ -55,10 +105,35 @@ const stylesData = [
   {
     name: "cyberpunk",
     shortDescription: "Futuristic neon-lit environment.",
-    longDescription:
-      "Cyberpunk setups bring a futuristic, neon-infused look, inspired by sci-fi aesthetics and advanced technology.",
+    longDescription: `
+  Are you drawn to futuristic aesthetics, neon vibes, and a workspace that feels like it's part of a sci-fi city?  
+  The **Cyberpunk Theme** is your perfect match. With bold lighting, edgy decor, and high-tech elements,  
+  this setup transforms your room into a digital haven straight out of a dystopian future.
+
+  🌃 Neon tones & reactive lighting:  
+  Dive into a world of glowing hues and chromatic contrasts. Use RGB strips, Govee Neon Lights, or  
+  the Nanoleaf Lines to bring that iconic cyberpunk energy into your space.
+
+  🎭 Futuristic art & tech soul:  
+  Display digital art frames, anime statues like Cyber Miku or Arasaka-inspired figures, and dynamic LED panels  
+  to express a gritty yet vibrant personality.
+
+  📺 High-tech immersion:  
+  Equip your setup with a frameless OLED monitor, Divoom Pixoo-64 for pixel animations, and compact  
+  soundbars with reactive lights. These not only enhance your experience but double as digital decor.
+
+  🧩 Tech-industrial fusion:  
+  Combine metallic accessories, clear keycaps with neon backlighting, a smoked acrylic desk mat,  
+  and gear with exposed circuits to strike the balance between raw and refined.
+
+  🚀 Who is this style for?  
+  Perfect for gamers, streamers, digital rebels, or anyone who wants their space to scream **futuristic attitude**.  
+  Especially ideal for fans of *Cyberpunk 2077*, *Blade Runner*, and high-tech visual storytelling.
+
+  Bring the future into your room with the **Cyberpunk Theme**—where technology meets rebellion and light cuts through the night.
+`,
     cardImage: "/Home_image/cyberpunk.jpg",
-    descriptionImage: "/images/cyberpunk_details.jpg",
+    descriptionImage: "/Home_image/cyberpunk_modal.png",
   },
   {
     name: "dark_black",
