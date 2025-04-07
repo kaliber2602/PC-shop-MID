@@ -1,12 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Rating } from "react-simple-star-rating";
 
 const Card = ({ id, image, title, price, category }) => {
-  const handleRating = (rate) => {
-    console.log("Rated:", rate);
+  const [cartItemsLength, setCartItemsLength] = useState(0);
+
+  // Fetch số lượng cart items để tạo ID mới
+  async function getCartItemsLength() {
+    try {
+      const response = await fetch("http://localhost:3000/cartItems");
+      const cartItems = await response.json();
+      return cartItems.length; // Số lượng hiện tại để tạo ID mới
+    } catch (error) {
+      console.error("Error fetching cart items:", error);
+      return 0;
+    }
+  }
+
+  useEffect(() => {
+    getCartItemsLength().then(length => {
+      setCartItemsLength(length);
+    });
+  }, []);
+
+  async function postData(data) {
+    try {
+      const response = await fetch("http://localhost:3000/cartItems", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) throw new Error("Failed to add to cart");
+      const result = await response.json();
+      console.log("Success:", result);
+      // Cập nhật lại cartItemsLength sau khi thêm thành công
+      setCartItemsLength(prev => prev + 1);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  const addToCart = (productId, productImage, productTitle, productPrice, quantity) => {
+    const newId = cartItemsLength + 1; // Tạo ID mới dựa trên số lượng hiện tại
+    const totalPrice = quantity * parseFloat(productPrice);
+    const data = {
+      id: newId,
+      product_id: productId,
+      image: productImage,
+      title: productTitle,
+      price: parseFloat(productPrice),
+      quantity: quantity,
+      totalPrice: totalPrice,
+    };
+    postData(data);
+    this.forceUpdate()
   };
+
+  const handleRating = (rate) => console.log("Rated:", rate);
   const onPointerEnter = () => console.log("Enter");
   const onPointerLeave = () => console.log("Leave");
   const onPointerMove = (value, index) => console.log(value, index);
@@ -42,7 +95,7 @@ const Card = ({ id, image, title, price, category }) => {
               fontSize: "20px",
               fontWeight: "bold",
               margin: 0,
-              textTransform: "Uppercase"
+              textTransform: "uppercase",
             }}
           >
             <b>{title}</b>
@@ -61,7 +114,7 @@ const Card = ({ id, image, title, price, category }) => {
             <b>Category:</b> {category}
           </p>
           <h2 style={{ margin: 0 }}>
-            <b>${price}</b>
+            <b>{price}</b>
           </h2>
         </div>
       </NavLink>
@@ -87,6 +140,7 @@ const Card = ({ id, image, title, price, category }) => {
         <button
           className="btn btn-primary"
           style={{ marginLeft: "10px" }}
+          onClick={() => addToCart(id, image, title, price, 1)}
         >
           Add to Cart
         </button>

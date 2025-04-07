@@ -47,8 +47,7 @@ const Displayproduct = ({ selectedCategory }) => {
     const filteredProducts = selectedCategory
         ? products.filter(product => product.category === selectedCategory)
         : products;
-
-    // console.log(products); // Kiểm tra dữ liệu trong console
+     // Kiểm tra dữ liệu trong console
 
     return (
         <div className="col-lg-6 col-xl-6 col-sm-12 col-md-12 mb-4 d-flex flex-column" style={{ backgroundColor: "white", zIndex: 10 }}>
