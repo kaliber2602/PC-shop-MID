@@ -21,9 +21,7 @@ const About_body = () => {
             <img src="/avatars/Duong.jpg" alt="Image 3" className="img-fluid  rounded-circle w-50" />
             <h1>Pham Ngoc Duong</h1>
             <h2>+112233445</h2>
-
             <p>523H0016@student.tdtu.edu.vn</p>
-
           </div>
 
         </div>

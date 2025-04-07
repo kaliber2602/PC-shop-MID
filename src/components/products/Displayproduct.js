@@ -21,7 +21,7 @@ const Displayproduct = ({ selectedCategory }) => {
             const response = await fetch("http://localhost:3000/products/");
             const Products = await response.json();
             const formattedProducts = Products.map(product => ({
-                id: Number(product.id),
+                id: (product.id),
                 image: product.image,
                 title: product.title,
                 price: product.price,

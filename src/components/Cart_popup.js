@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo, useCallback } from "react";
 import { Badge, Button, Table, Typography, Space } from "antd";
 import { ShoppingCartOutlined, DeleteOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,8 +17,8 @@ const Cart_popup = () => {
     setIsOpen(!isOpen);
   };
 
-  // Fetch cart items từ JSON Server
-  const fetchCartItems = async () => {
+  // Fetch ban đầu và thiết lập Web Worker
+  const fetchCartItems = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch("http://localhost:3000/cartItems");
@@ -32,13 +32,24 @@ const Cart_popup = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  useEffect(() => {
-    fetchCartItems();
   }, []);
 
-  // Hàm tăng số lượng
+  useEffect(() => {
+    fetchCartItems(); // Fetch ban đầu
+
+    // Khởi tạo Web Worker
+    const worker = new Worker(new URL("./cartWorker.js", import.meta.url));
+    worker.onmessage = (e) => {
+      if (e.data.error) {
+        setError(e.data.error);
+      } else if (e.data.cartItems) {
+        setCartItems(e.data.cartItems); // Chỉ cập nhật khi có thay đổi
+      }
+    };
+
+    return () => worker.terminate(); // Dọn dẹp worker khi unmount
+  }, [fetchCartItems]);
+
   const increaseQuantity = async (record) => {
     setLoading(true);
     setError(null);
@@ -52,16 +63,13 @@ const Cart_popup = () => {
     try {
       const response = await fetch(`http://localhost:3000/cartItems/${record.id}`, {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedItem),
       });
-      if (!response.ok) {
-        if (response.status === 404) throw new Error(`Item with ID ${record.id} not found`);
-        throw new Error("Failed to update quantity");
-      }
-      await fetchCartItems();
+      if (!response.ok) throw new Error("Failed to update quantity");
+      setCartItems(prevItems =>
+        prevItems.map(item => (item.id === record.id ? updatedItem : item))
+      );
     } catch (error) {
       console.error("Error increasing quantity:", error);
       setError(error.message);
@@ -70,7 +78,6 @@ const Cart_popup = () => {
     }
   };
 
-  // Hàm giảm số lượng
   const decreaseQuantity = async (record) => {
     if (record.quantity <= 1) return;
     setLoading(true);
@@ -85,16 +92,13 @@ const Cart_popup = () => {
     try {
       const response = await fetch(`http://localhost:3000/cartItems/${record.id}`, {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedItem),
       });
-      if (!response.ok) {
-        if (response.status === 404) throw new Error(`Item with ID ${record.id} not found`);
-        throw new Error("Failed to update quantity");
-      }
-      await fetchCartItems();
+      if (!response.ok) throw new Error("Failed to update quantity");
+      setCartItems(prevItems =>
+        prevItems.map(item => (item.id === record.id ? updatedItem : item))
+      );
     } catch (error) {
       console.error("Error decreasing quantity:", error);
       setError(error.message);
@@ -103,29 +107,15 @@ const Cart_popup = () => {
     }
   };
 
-  // Hàm xóa sản phẩm khỏi giỏ
   const removeItem = async (record) => {
     setLoading(true);
     setError(null);
     try {
-      // Kiểm tra xem item có tồn tại trên server trước khi xóa
-      const checkResponse = await fetch(`http://localhost:3000/cartItems/${record.id}`);
-      if (!checkResponse.ok) {
-        if (checkResponse.status === 404) {
-          setCartItems(cartItems.filter(item => item.id !== record.id)); // Xóa khỏi state nếu không có trên server
-          throw new Error(`Item with ID ${record.id} not found on server`);
-        }
-        throw new Error("Failed to check item existence");
-      }
-
-      const deleteResponse = await fetch(`http://localhost:3000/cartItems/${record.id}`, {
+      const response = await fetch(`http://localhost:3000/cartItems/${record.id}`, {
         method: "DELETE",
       });
-      if (!deleteResponse.ok) {
-        if (deleteResponse.status === 404) throw new Error(`Item with ID ${record.id} not found`);
-        throw new Error("Failed to delete item");
-      }
-      await fetchCartItems();
+      if (!response.ok) throw new Error("Failed to delete item");
+      setCartItems(prevItems => prevItems.filter(item => item.id !== record.id));
     } catch (error) {
       console.error("Error deleting item:", error);
       setError(error.message);
@@ -134,7 +124,6 @@ const Cart_popup = () => {
     }
   };
 
-  // Định nghĩa cột cho bảng Ant Design
   const columns = [
     {
       title: "Product",
@@ -162,19 +151,9 @@ const Cart_popup = () => {
       width: "15%",
       render: (text, record) => (
         <Space>
-          <Button
-            type="text"
-            icon={<MinusOutlined />}
-            onClick={() => decreaseQuantity(record)}
-            disabled={record.quantity <= 1 || loading}
-          />
+          <Button type="text" icon={<MinusOutlined />} onClick={() => decreaseQuantity(record)} disabled={record.quantity <= 1 || loading} />
           <span>{text}</span>
-          <Button
-            type="text"
-            icon={<PlusOutlined />}
-            onClick={() => increaseQuantity(record)}
-            disabled={loading}
-          />
+          <Button type="text" icon={<PlusOutlined />} onClick={() => increaseQuantity(record)} disabled={loading} />
         </Space>
       ),
     },
@@ -190,12 +169,7 @@ const Cart_popup = () => {
       key: "action",
       width: "5%",
       render: (_, record) => (
-        <Button
-          type="text"
-          icon={<DeleteOutlined style={{ color: "#ff4d4f" }} />}
-          onClick={() => removeItem(record)}
-          disabled={loading}
-        />
+        <Button type="text" icon={<DeleteOutlined style={{ color: "#ff4d4f" }} />} onClick={() => removeItem(record)} disabled={loading} />
       ),
     },
   ];
@@ -218,9 +192,7 @@ const Cart_popup = () => {
         <div className="cart-dropdown">
           <div className="cart-header">
             <Title level={5}>Shopping Cart</Title>
-            <button className="close-btn" onClick={toggleCart}>
-              ×
-            </button>
+            <button className="close-btn" onClick={toggleCart}>×</button>
           </div>
           <div className="cart-items">
             {loading ? (
@@ -245,18 +217,9 @@ const Cart_popup = () => {
             <div className="cart-footer">
               <div className="cart-total">
                 <span>Total:</span>
-                <span>
-                  $
-                  {cartItems
-                    .reduce((sum, item) => sum + item.totalPrice, 0)
-                    .toFixed(2)}
-                </span>
+                <span>${cartItems.reduce((sum, item) => sum + item.totalPrice, 0).toFixed(2)}</span>
               </div>
-              <Button
-                type="primary"
-                className="checkout-btn"
-                style={{ backgroundColor: "#4285f4", borderColor: "#4285f4" }}
-              >
+              <Button type="primary" className="checkout-btn" style={{ backgroundColor: "#4285f4", borderColor: "#4285f4" }}>
                 Checkout
               </Button>
             </div>
@@ -267,4 +230,4 @@ const Cart_popup = () => {
   );
 };
 
-export default Cart_popup;
+export default memo(Cart_popup);

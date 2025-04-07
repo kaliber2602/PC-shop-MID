@@ -37,6 +37,7 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
       setProducts(fetchedProducts);
     });
   }, []);
+  
 
   const handleSearchClick = () => {
     const query = searchQuery.trim().toLowerCase();
@@ -63,6 +64,7 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
       navigate("/Login");   // Chuyển đến trang đăng nhập
     }
   };
+
 
   return (
     <>
@@ -134,7 +136,7 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
                         </NavLink>
                       </li>
                       <li className="nav-item">
-                        <button
+                      <button
                           className={`nav-link bg-transparent border-0 ${isLoggedIn ? 'text-danger' : ''}`}
                           onClick={handleAuthClick}
                         >

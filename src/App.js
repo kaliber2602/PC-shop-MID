@@ -16,7 +16,6 @@ import CartPopup from "./components/Cart_popup.js";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
-// 👉 Sub-component nằm bên trong App.js để sử dụng useLocation
 const AppRoutes = ({ isLoggedIn, setIsLoggedIn, handleLoginSuccess }) => {
   const location = useLocation();
   const [showWelcome, setShowWelcome] = useState(false);
@@ -28,54 +27,53 @@ const AppRoutes = ({ isLoggedIn, setIsLoggedIn, handleLoginSuccess }) => {
       return () => clearTimeout(timer);
     }
   }, [location]);
-
   return (
     <>
-      {showWelcome && (alert("👋 Welcome back!"))}
+        {showWelcome && (alert("👋 Welcome back!"))}
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <About isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Contact isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-          }
-        />
-        <Route
-          path="/product-category"
-          element={
-            <ProductCategory
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={setIsLoggedIn}
-            />
-          }
-        />
-        <Route
-          path="/login"
-          element={<Login onLoginSuccess={handleLoginSuccess} />}
-        />
-        <Route path="/register" element={<Register />} />
-        <Route
-          path="/product-detail/:id"
-          element={
-            <ProductDetail
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={setIsLoggedIn}
-            />
-          }
-        />
-      </Routes>
+<Routes>
+  <Route
+    path="/"
+    element={
+      <Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+    }
+  />
+  <Route
+    path="/about"
+    element={
+      <About isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+    }
+  />
+  <Route
+    path="/contact"
+    element={
+      <Contact isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+    }
+  />
+  <Route
+    path="/product-category"
+    element={
+      <ProductCategory
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+      />
+    }
+  />
+  <Route
+    path="/login"
+    element={<Login onLoginSuccess={handleLoginSuccess} />}
+  />
+  <Route path="/register" element={<Register />} />
+  <Route
+    path="/product-detail/:id"
+    element={
+      <ProductDetail
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+      />
+    }
+  />
+</Routes>
     </>
   );
 };

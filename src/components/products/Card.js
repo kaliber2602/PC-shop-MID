@@ -4,26 +4,32 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Rating } from "react-simple-star-rating";
 
 const Card = ({ id, image, title, price, category }) => {
-  const [cartItemsLength, setCartItemsLength] = useState(0);
+  const [lastCartItemId, setLastCartItemId] = useState(0);
 
-  // Fetch số lượng cart items để tạo ID mới
-  async function getCartItemsLength() {
+  // Lấy ID lớn nhất từ danh sách cartItems
+  async function getLastCartItemId() {
     try {
       const response = await fetch("http://localhost:3000/cartItems");
+      if (!response.ok) throw new Error("Failed to fetch cart items");
       const cartItems = await response.json();
-      return cartItems.length; // Số lượng hiện tại để tạo ID mới
+      if (cartItems.length === 0) return 0; // Nếu danh sách rỗng, bắt đầu từ 0
+      // Tìm ID lớn nhất (chuyển id về số nếu server trả về chuỗi)
+      const maxId = Math.max(...cartItems.map(item => Number(item.id)));
+      return maxId;
     } catch (error) {
       console.error("Error fetching cart items:", error);
       return 0;
     }
   }
 
+  // Khởi tạo lastCartItemId khi component mount
   useEffect(() => {
-    getCartItemsLength().then(length => {
-      setCartItemsLength(length);
+    getLastCartItemId().then(id => {
+      setLastCartItemId(id);
     });
   }, []);
 
+  // Gửi dữ liệu lên server
   async function postData(data) {
     try {
       const response = await fetch("http://localhost:3000/cartItems", {
@@ -36,18 +42,20 @@ const Card = ({ id, image, title, price, category }) => {
       if (!response.ok) throw new Error("Failed to add to cart");
       const result = await response.json();
       console.log("Success:", result);
-      // Cập nhật lại cartItemsLength sau khi thêm thành công
-      setCartItemsLength(prev => prev + 1);
+      // Cập nhật lastCartItemId dựa trên ID vừa thêm
+      setLastCartItemId(prev => prev + 1);
     } catch (error) {
       console.error("Error:", error);
     }
   }
 
-  const addToCart = (productId, productImage, productTitle, productPrice, quantity) => {
-    const newId = cartItemsLength + 1; // Tạo ID mới dựa trên số lượng hiện tại
+  const addToCart = async (productId, productImage, productTitle, productPrice, quantity) => {
+    // Lấy ID lớn nhất hiện tại từ server để đảm bảo không trùng
+    const lastId = await getLastCartItemId();
+    const newId = lastId + 1; // Tạo ID mới tăng dần
     const totalPrice = quantity * parseFloat(productPrice);
     const data = {
-      id: newId,
+      id: (newId).toString(), // Gửi id lên server
       product_id: productId,
       image: productImage,
       title: productTitle,
@@ -55,7 +63,7 @@ const Card = ({ id, image, title, price, category }) => {
       quantity: quantity,
       totalPrice: totalPrice,
     };
-    postData(data);
+    await postData(data);
   };
 
   const handleRating = (rate) => console.log("Rated:", rate);

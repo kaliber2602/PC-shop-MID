@@ -48,7 +48,6 @@ const DetailBody = ({ product }) => {
                                 <strong>Quantity:</strong>
                                 <input type="number" value="1" min="1" className="form-control-inline w-2" />
                             </p>
-                            <button className="btn btn-danger">Buy Now</button>
                             <button className="btn btn-dark">Add to cart</button>
                         </div>
 
