@@ -13,6 +13,11 @@ const Cart_popup = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+
+  const processImage = (image) => {
+    return image.startsWith("/") ? image : `/${image}`;
+  };
+
   const toggleCart = () => {
     setIsOpen(!isOpen);
   };
@@ -131,7 +136,7 @@ const Cart_popup = () => {
       key: "title",
       render: (text, record) => (
         <Space>
-          <img style={{ width: "20px" }} src={record.image} alt={record.title} />
+          <img style={{ width: "20px" }} src={processImage(record.image)} alt={record.title} />
           {text}
         </Space>
       ),
@@ -182,7 +187,7 @@ const Cart_popup = () => {
 
   return (
     <div className="cart-container">
-      <div className="cart-popup" onClick={toggleCart}>
+      <div id="cart-popup" className="cart-popup" onClick={toggleCart}>
         <Badge count={cartItems.length}>
           <ShoppingCartOutlined className="cart-icon" />
         </Badge>

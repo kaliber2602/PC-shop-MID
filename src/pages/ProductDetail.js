@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import DetailBody from "../components/DetailBody"
+import DetailBody from "../components/DetailBody";
 const ProductDetail = ({ isLoggedIn, setIsLoggedIn }) => {
     const { id } = useParams();
 
@@ -43,12 +43,11 @@ const ProductDetail = ({ isLoggedIn, setIsLoggedIn }) => {
 
     const product = products.find((product) => product.id === parseInt(id));
 
-
     return (
         <>
             <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             {product ? (
-                <DetailBody product={product} />
+                <DetailBody product={product}/>
             ) : (
                 <p>Product not found.</p>
             )}

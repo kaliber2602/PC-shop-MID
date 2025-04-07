@@ -3,8 +3,21 @@ import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Rating } from "react-simple-star-rating";
 
-const Card = ({ id, image, title, price, category }) => {
+const Card = ({ product }) => {
   const [lastCartItemId, setLastCartItemId] = useState(0);
+
+// Lấy toàn bộ danh sách cartItems để kiểm tra
+async function getCartItems() {
+  try {
+    const response = await fetch("http://localhost:3000/cartItems");
+    if (!response.ok) throw new Error("Failed to fetch cart items");
+    const cartItems = await response.json();
+    return cartItems;
+  } catch (error) {
+    console.error("Error fetching cart items:", error);
+    return [];
+  }
+}
 
   // Lấy ID lớn nhất từ danh sách cartItems
   async function getLastCartItemId() {
@@ -50,14 +63,21 @@ const Card = ({ id, image, title, price, category }) => {
   }
 
   const addToCart = async (productId, productImage, productTitle, productPrice, quantity) => {
-    // Lấy ID lớn nhất hiện tại từ server để đảm bảo không trùng
+    const cartItems = await getCartItems();
+
+    const existProduct = cartItems.some(item => Number(item.product_id) === Number(productId));
+
+    if (existProduct) {
+      alert("Already have this item in cart");
+      return;
+    }
     const lastId = await getLastCartItemId();
-    const newId = lastId + 1; // Tạo ID mới tăng dần
+    const newId = lastId + 1;
     const totalPrice = quantity * parseFloat(productPrice);
     const data = {
-      id: (newId).toString(), // Gửi id lên server
+      id: newId.toString(),
       product_id: productId,
-      image: productImage,
+      image: "/" + productImage,
       title: productTitle,
       price: parseFloat(productPrice),
       quantity: quantity,
@@ -77,7 +97,7 @@ const Card = ({ id, image, title, price, category }) => {
       style={{ height: "400px", display: "flex", flexDirection: "column" }}
     >
       <NavLink
-        to={`/product-detail/${id}`}
+        to={`/product-detail/${product.id}`}
         className="nav-link"
         style={{ textDecoration: "none" }}
       >
@@ -86,9 +106,9 @@ const Card = ({ id, image, title, price, category }) => {
           style={{ width: "100%", height: "250px", overflow: "hidden" }}
         >
           <img
-            src={image}
+            src={product.image}
             className="card-img-top"
-            alt={title}
+            alt={product.title}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
@@ -105,7 +125,7 @@ const Card = ({ id, image, title, price, category }) => {
               textTransform: "uppercase",
             }}
           >
-            <b>{title}</b>
+            <b>{product.title}</b>
           </h2>
           <p
             style={{
@@ -118,10 +138,10 @@ const Card = ({ id, image, title, price, category }) => {
               maxWidth: "100%",
             }}
           >
-            <b>Category:</b> {category}
+            <b>Category:</b> {product.category}
           </p>
           <h2 style={{ margin: 0 }}>
-            <b>{price}</b>
+            <b>${product.price}</b>
           </h2>
         </div>
       </NavLink>
@@ -147,7 +167,7 @@ const Card = ({ id, image, title, price, category }) => {
         <button
           className="btn btn-primary"
           style={{ marginLeft: "10px" }}
-          onClick={() => addToCart(id, image, title, price, 1)}
+          onClick={() => addToCart(product.id, product.image, product.title, product.price, 1)}
         >
           Add to Cart
         </button>
