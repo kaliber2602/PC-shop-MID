@@ -18,10 +18,12 @@ const About_body = () => {
             <p>523H0102@student.tdtu.edu.vn</p>
           </div>
           <div className="col-lg-4 col-xl-4 col-md-12 col-sm-12 rounded-lg text-center p-3">
-            <img src="/avatars/Duong.jpg" alt="Image 3" className="img-fluid  rounded-circle w-50" />
-            <h1>Pham Ngoc Duong</h1>
+            <img src="your-image-url-3.jpg" alt="Image 3" className="img-fluid  rounded-circle w-50" />
+            <h1>Mark Johnson</h1>
             <h2>+112233445</h2>
+
             <p>523H0016@email.com</p>
+
           </div>
 
         </div>

@@ -1,13 +1,14 @@
 import React, {useState} from "react";
+import React from "react";
 import "./Login.css";
 import logo from "./Logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { useNavigate } from "react-router-dom";
-import ToastNotification from "./ToastNotification";
 
 const Login = () => {
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     userName: "",
     password: "",
@@ -74,6 +75,7 @@ const Login = () => {
     // navigate("/dashboard"); // hoặc nơi bạn muốn chuyển hướng
   };
 
+
   return (
     <div className="container-fluid">
       <div className="row">
@@ -85,56 +87,43 @@ const Login = () => {
           <input
             className="form-control w-75 mb-3 mx-auto shadow p-2"
             type="text"
-            id="userName"
-            name="userName"
-            placeholder="Enter Your Username"
-            value={formData.userName}
-            onChange={handleChange}
-            onBlur={() => handleValidation("userName")}
+            id="contactInfo"
+            name="contactInfo"
+            placeholder="  Enter Your Username"
+            required
           />
 
           <input
             className="form-control w-75 mb-3 mx-auto p-2"
             type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-            onBlur={() => handleValidation("password")}
+            placeholder="  Password"
+            required
           />
 
-          <button
-            className="btn submit gradient-hover-effect w-75 mb-3 mx-auto"
-            onClick={handleSubmit}
-          >
+          <button className="btn submit gradient-hover-effect w-75 mb-3 mx-auto">
             <b className="h3">Login</b>
           </button>
-          <div className="container w-75 mb-3 mx-auto" style={{ height: "100px" }}>
+          <div className="container w-75 mb-3 mx-auto"
+            style={{
+              height: "100px"
+            }}>
+
             <div className="row">
-              <div className="forgot-password text-left col-6">
+
+              <div className="forgot-password text-left col-6" >
                 <a href="#">Forgot password?</a>
               </div>
-              <div className="create-account text-right col-6" style={{ textAlign: "right" }}>
-                <a href="./Register">Create new account</a>
-              </div>
-            </div>
+              <div
+                className="create-account text-right col-6" style={{ textAlign: "right" }}
+              >
+                <a href="./Register">Create new account </a>
+              </div></div>
+
           </div>
           </div>
         </div>
 
-      {/* Toast Message */}
-      <div id="toast">
-        {toast && (
-          <ToastNotification
-            type={toast.type}
-            message={toast.message}
-            onClose={handleToastClose}
-            duration={4000}
-          />
-        )}
       </div>
-    </div>
   );
 };
 
