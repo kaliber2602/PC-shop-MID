@@ -56,7 +56,6 @@ const Card = ({ id, image, title, price, category }) => {
       totalPrice: totalPrice,
     };
     postData(data);
-    this.forceUpdate()
   };
 
   const handleRating = (rate) => console.log("Rated:", rate);
