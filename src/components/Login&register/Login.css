@@ -81,7 +81,7 @@
 }
 
 
-
+/* Thêm style cho các input khi hợp lệ và không hợp lệ */
 .invalid-input {
   background-color: #f8d7da !important;
   border-color: #dc3545 !important;
@@ -91,3 +91,4 @@
   background-color: #d4edda !important;
   border-color: #28a745 !important;
 }
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./Login.css";
 import logo from "./Logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -70,9 +70,8 @@ const Login = () => {
     }
 
     setToast({ type: "success", message: "Login successful!" });
-    alert("Login successful!");
-    // Navigate to another page after successful login
-    // navigate("/dashboard");
+
+    // navigate("/dashboard"); // hoặc nơi bạn muốn chuyển hướng
   };
 
   return (
@@ -121,8 +120,8 @@ const Login = () => {
               </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
 
       {/* Toast Message */}
       <div id="toast">

@@ -7,7 +7,7 @@ const About_body = () => {
         <div className="row justify-content-center w-100 mt-3">
           <div className="col-lg-4 col-xl-4 col-md-12 col-sm-12 rounded-lg text-center p-3">
             <img src="/avatars/Thang.jpg" alt="Image 1" className="img-fluid rounded-circle w-50" />
-            <h1>Nguyen Quoc Thang</h1>
+            <h1>Nguyen Thang</h1>
             <h2>+0906395035</h2>
             <p>523H0094@student.tdtu.edu.vn</p>
           </div>
@@ -21,7 +21,7 @@ const About_body = () => {
             <img src="/avatars/Duong.jpg" alt="Image 3" className="img-fluid  rounded-circle w-50" />
             <h1>Pham Ngoc Duong</h1>
             <h2>+112233445</h2>
-            <p>523H0016@student.tdtu.edu.vn</p>
+            <p>523H0016@email.com</p>
           </div>
 
         </div>

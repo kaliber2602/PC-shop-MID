@@ -6,6 +6,49 @@ const Menu = ({ onSelectCategory }) => {
   const handleCategoryClick = (category) => {
     onSelectCategory(category);
   };
+
+  const menuItems = [
+    { title: "PC & Laptop", subItems: ["PC", "Laptop"] },
+    {
+      title: "PC Components",
+      subItems: [
+        "CPU",
+        "GPU (Graphics Card)",
+        "RAM",
+        "SSD & HDD (Storage)",
+        "PSU (Power Supply Unit)",
+        "Motherboard",
+        "Cooling Solutions",
+      ],
+    },
+    { title: "Monitors" },
+    {
+      title: "Mechanical Keyboards & Accessories",
+      subItems: ["Mechanical Keyboards", "Keycap Sets"],
+    },
+    {
+      title: "Mice & Mousepads",
+      subItems: ["Gaming Mice", "Mousepads"],
+    },
+    {
+      title: "Headphones & Speakers",
+      subItems: ["Headphones", "Speakers"],
+    },
+    {
+      title: "Chairs & Desks",
+      subItems: ["Chairs", "Desks"],
+    },
+    {
+      title: "Other Accessories",
+      subItems: [
+        "Cables & Adapters",
+        "Hubs & Docking Stations",
+        "LED Lighting",
+        "Stands & Mounts",
+      ],
+    },
+  ];
+
   return (
     <div className="col-lg-2 col-xl-2 col-sm-12 col-md-12 mb-4 menu">
       <h1
@@ -24,46 +67,48 @@ const Menu = ({ onSelectCategory }) => {
 
       {menuItems.map((item, index) => (
         <div key={index} className="dropdown show p-2 rounded mb-0">
-          <a
-            className={`btn btn-secondary col-12 ${item.subItems ? "dropdown-toggle" : ""}`}
-            href="#"
-            role="button"
-            id={`dropdownMenuLink-${index}`}
-            data-bs-toggle={item.subItems ? "dropdown" : ""}
-            aria-haspopup={item.subItems ? "true" : ""}
-            aria-expanded={item.subItems ? "false" : ""}
-            onClick={(e) => {
-              e.preventDefault();
-              if (!item.subItems) handleCategoryClick(item.title);
-            }}
-            style={{
-              whiteSpace: "normal",
-              wordWrap: "break-word",
-              overflowWrap: "break-word"
-            }}
-          >
-            {item.title}
-            {item.subItems && (
+          {item.subItems ? (
+            <button
+              className="btn btn-secondary col-12 dropdown-toggle"
+              type="button" // Required for buttons to clarify their role
+              id={`dropdownMenuLink-${index}`}
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style={{
+                whiteSpace: "normal",
+                wordWrap: "break-word",
+                overflowWrap: "break-word",
+              }}
+            >
+              {item.title}
               <span className="ms-2">
                 <i className="bi bi-chevron-down"></i>
               </span>
-            )}
-          </a>
+            </button>
+          ) : (
+            <button
+              className="btn btn-secondary col-12"
+              onClick={() => handleCategoryClick(item.title)}
+              style={{
+                whiteSpace: "normal",
+                wordWrap: "break-word",
+                overflowWrap: "break-word",
+              }}
+            >
+              {item.title}
+            </button>
+          )}
 
           {item.subItems && (
             <div className="dropdown-menu" aria-labelledby={`dropdownMenuLink-${index}`}>
               {item.subItems.map((subItem, subIndex) => (
-                <a
+                <button
                   key={subIndex}
                   className="dropdown-item"
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleCategoryClick(subItem);
-                  }}
+                  onClick={() => handleCategoryClick(subItem)}
                 >
                   {subItem}
-                </a>
+                </button>
               ))}
             </div>
           )}
@@ -71,50 +116,8 @@ const Menu = ({ onSelectCategory }) => {
       ))}
     </div>
   );
-
 };
 
-const menuItems = [
-  { title: "PC & Laptop", subItems: ["PC", "Laptop"] },
-  {
-    title: "PC Components",
-    subItems: [
-      "CPU",
-      "GPU (Graphics Card)",
-      "RAM",
-      "SSD & HDD (Storage)",
-      "PSU (Power Supply Unit)",
-      "Motherboard",
-      "Cooling Solutions",
-    ],
-  },
-  { title: "Monitors" },
-  {
-    title: "Mechanical Keyboards & Accessories",
-    subItems: ["Mechanical Keyboards", "Keycap Sets"],
-  },
-  {
-    title: "Mice & Mousepads",
-    subItems: ["Gaming Mice", "Mousepads"],
-  },
-  {
-    title: "Headphones & Speakers",
-    subItems: ["Headphones", "Speakers"],
-  },
-  {
-    title: "Chairs & Desks",
-    subItems: ["Chairs", "Desks"],
-  },
-  {
-    title: "Other Accessories",
-    subItems: [
-      "Cables & Adapters",
-      "Hubs & Docking Stations",
-      "LED Lighting",
-      "Stands & Mounts",
-    ],
-  },
-];
+
 
 export default Menu;
-

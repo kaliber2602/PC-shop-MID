@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Badge, Button, Table, Typography, Space } from "antd";
-import { ShoppingCartOutlined, DeleteOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons"; // Thêm PlusOutlined, MinusOutlined
+import { ShoppingCartOutlined, DeleteOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import './Cart_popup.css';
@@ -10,75 +10,128 @@ const { Title } = Typography;
 const Cart_popup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const toggleCart = () => {
     setIsOpen(!isOpen);
   };
 
-  function CartItem(id, image, title, price, quantity, totalPrice) {
-    this.id = Number(id);
-    this.image = image;
-    this.title = title;
-    this.price = parseFloat(price);
-    this.quantity = Number(quantity);
-    this.totalPrice = parseFloat(price * quantity);
-  }
-
-  function UpdateCartItem(id, image, title, price, quantity, totalPrice) {
-    this.id = Number(id);
-    this.image = image;
-    this.title = title;
-    this.price = parseFloat(price);
-    this.quantity = Number(quantity);
-    this.totalPrice = parseFloat(totalPrice);
-    // Thay đổi json database
-  }
+  // Fetch cart items từ JSON Server
+  const fetchCartItems = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch("http://localhost:3000/cartItems");
+      if (!response.ok) throw new Error("Failed to fetch cart items");
+      const json = await response.json();
+      setCartItems(json);
+      setError(null);
+    } catch (error) {
+      console.error("Error fetching cart items:", error);
+      setError("Could not load cart items");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    fetch("http://localhost:3000/cartItems/")
-      .then((response) => response.json())
-      .then((json) => {
-        const cartItemList = json.map(
-          (item) =>
-            new CartItem(item.id, item.image, item.title, item.price, item.quantity, item.totalPrice)
-        );
-        setCartItems(cartItemList);
-      })
-      .catch((error) => {
-        console.error("Error fetching cart items:", error);
-      });
+    fetchCartItems();
   }, []);
 
   // Hàm tăng số lượng
-  const increaseQuantity = (record) => {
-    const updatedItems = cartItems.map((item) => {
-      if (item.id === record.id) {
-        const newQuantity = item.quantity + 1;
-        return {
-          ...item,
-          quantity: newQuantity,
-          totalPrice: parseFloat(item.price * newQuantity),
-        };
+  const increaseQuantity = async (record) => {
+    setLoading(true);
+    setError(null);
+    const newQuantity = record.quantity + 1;
+    const updatedItem = {
+      ...record,
+      quantity: newQuantity,
+      totalPrice: parseFloat((record.price * newQuantity).toFixed(2)),
+    };
+
+    try {
+      const response = await fetch(`http://localhost:3000/cartItems/${record.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedItem),
+      });
+      if (!response.ok) {
+        if (response.status === 404) throw new Error(`Item with ID ${record.id} not found`);
+        throw new Error("Failed to update quantity");
       }
-      return item;
-    });
-    setCartItems(updatedItems);
+      await fetchCartItems();
+    } catch (error) {
+      console.error("Error increasing quantity:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  // Hàm giảm số lượng (không cho phép giảm xuống dưới 1)
-  const decreaseQuantity = (record) => {
-    const updatedItems = cartItems.map((item) => {
-      if (item.id === record.id && item.quantity > 1) {
-        const newQuantity = item.quantity - 1;
-        return {
-          ...item,
-          quantity: newQuantity,
-          totalPrice: parseFloat(item.price * newQuantity),
-        };
+  // Hàm giảm số lượng
+  const decreaseQuantity = async (record) => {
+    if (record.quantity <= 1) return;
+    setLoading(true);
+    setError(null);
+    const newQuantity = record.quantity - 1;
+    const updatedItem = {
+      ...record,
+      quantity: newQuantity,
+      totalPrice: parseFloat((record.price * newQuantity).toFixed(2)),
+    };
+
+    try {
+      const response = await fetch(`http://localhost:3000/cartItems/${record.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedItem),
+      });
+      if (!response.ok) {
+        if (response.status === 404) throw new Error(`Item with ID ${record.id} not found`);
+        throw new Error("Failed to update quantity");
       }
-      return item;
-    });
-    setCartItems(updatedItems);
+      await fetchCartItems();
+    } catch (error) {
+      console.error("Error decreasing quantity:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Hàm xóa sản phẩm khỏi giỏ
+  const removeItem = async (record) => {
+    setLoading(true);
+    setError(null);
+    try {
+      // Kiểm tra xem item có tồn tại trên server trước khi xóa
+      const checkResponse = await fetch(`http://localhost:3000/cartItems/${record.id}`);
+      if (!checkResponse.ok) {
+        if (checkResponse.status === 404) {
+          setCartItems(cartItems.filter(item => item.id !== record.id)); // Xóa khỏi state nếu không có trên server
+          throw new Error(`Item with ID ${record.id} not found on server`);
+        }
+        throw new Error("Failed to check item existence");
+      }
+
+      const deleteResponse = await fetch(`http://localhost:3000/cartItems/${record.id}`, {
+        method: "DELETE",
+      });
+      if (!deleteResponse.ok) {
+        if (deleteResponse.status === 404) throw new Error(`Item with ID ${record.id} not found`);
+        throw new Error("Failed to delete item");
+      }
+      await fetchCartItems();
+    } catch (error) {
+      console.error("Error deleting item:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Định nghĩa cột cho bảng Ant Design
@@ -99,51 +152,49 @@ const Cart_popup = () => {
       title: "Price",
       dataIndex: "price",
       key: "price",
-      sorter: (a, b) => a.age - b.age,
+      sorter: (a, b) => a.price - b.price,
       width: "10%",
     },
     {
       title: "Quantity",
       dataIndex: "quantity",
       key: "quantity",
-      width: "10%",
-      sorter: (a, b) => a.age - b.age,
+      width: "15%",
       render: (text, record) => (
         <Space>
           <Button
             type="text"
             icon={<MinusOutlined />}
             onClick={() => decreaseQuantity(record)}
-            disabled={record.quantity <= 1} // Vô hiệu hóa nếu quantity <= 1
+            disabled={record.quantity <= 1 || loading}
           />
           <span>{text}</span>
           <Button
             type="text"
             icon={<PlusOutlined />}
             onClick={() => increaseQuantity(record)}
+            disabled={loading}
           />
         </Space>
       ),
     },
     {
-      title: "Total price",
+      title: "Total Price",
       dataIndex: "totalPrice",
       key: "totalPrice",
-      sorter: (a, b) => a.age - b.age,
+      sorter: (a, b) => a.totalPrice - b.totalPrice,
       width: "10%",
-      
     },
     {
       title: "Action",
       key: "action",
-      width: "10%",
+      width: "5%",
       render: (_, record) => (
         <Button
           type="text"
           icon={<DeleteOutlined style={{ color: "#ff4d4f" }} />}
-          onClick={() => {
-            setCartItems(cartItems.filter((item) => item.id !== record.id));
-          }}
+          onClick={() => removeItem(record)}
+          disabled={loading}
         />
       ),
     },
@@ -151,14 +202,10 @@ const Cart_popup = () => {
 
   const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
-      console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+      console.log(`selectedRowKeys: ${selectedRowKeys}`, "selectedRows: ", selectedRows);
     },
-    getCheckboxProps: record => ({
-      disabled: record.name === 'Disabled User', // Column configuration not to be checked
-      name: record.name,
-    }),
   };
-  const [selectionType, setSelectionType] = useState('checkbox');
+
   return (
     <div className="cart-container">
       <div className="cart-popup" onClick={toggleCart}>
@@ -176,11 +223,15 @@ const Cart_popup = () => {
             </button>
           </div>
           <div className="cart-items">
-            {cartItems.length === 0 ? (
+            {loading ? (
+              <p>Loading...</p>
+            ) : error ? (
+              <p style={{ color: "red" }}>{error}</p>
+            ) : cartItems.length === 0 ? (
               <p className="empty-cart">Your cart is empty</p>
             ) : (
               <Table
-                rowSelection={Object.assign({ type: selectionType }, rowSelection)}
+                rowSelection={{ type: "checkbox", ...rowSelection }}
                 columns={columns}
                 dataSource={cartItems}
                 rowKey="id"
@@ -190,13 +241,14 @@ const Cart_popup = () => {
               />
             )}
           </div>
-          {cartItems.length > 0 && (
+          {cartItems.length > 0 && !loading && !error && (
             <div className="cart-footer">
               <div className="cart-total">
                 <span>Total:</span>
                 <span>
-                  ${cartItems
-                    .reduce((sum, item) => sum + item.price * item.quantity, 0)
+                  $
+                  {cartItems
+                    .reduce((sum, item) => sum + item.totalPrice, 0)
                     .toFixed(2)}
                 </span>
               </div>
