@@ -13,6 +13,7 @@ export default function Header() {
   // Khởi tạo state để lưu products
   const [products, setProducts] = useState([]);
 
+
   // Hàm fetch dữ liệu
   async function getProducts() {
     try {
