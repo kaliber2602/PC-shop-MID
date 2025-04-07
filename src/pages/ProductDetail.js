@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import DetailBody from "../components/DetailBody"
-const ProductDetail = () => {
+const ProductDetail = ({ isLoggedIn, setIsLoggedIn }) => {
     const { id } = useParams();
 
     // DS san pham => se lay tu json-server
@@ -46,7 +46,7 @@ const ProductDetail = () => {
 
     return (
         <>
-            <Header />
+            <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             {product ? (
                 <DetailBody product={product} />
             ) : (

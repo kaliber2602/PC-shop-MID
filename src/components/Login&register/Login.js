@@ -1,19 +1,16 @@
-import React, {useState} from "react";
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import logo from "./Logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import ToastNotification from "./ToastNotification";
 import { useNavigate } from "react-router-dom";
-
-const Login = () => {
+const Login = ({ onLoginSuccess }) => {
   const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     userName: "",
     password: "",
   });
-
   const [toast, setToast] = useState(null);
 
   const handleChange = (e) => {
@@ -40,7 +37,6 @@ const Login = () => {
       isValid = false;
     }
 
-    // Thêm hoặc xóa class dựa vào kết quả kiểm tra
     if (inputElement) {
       if (!isValid) {
         inputElement.classList.add("invalid-input");
@@ -70,11 +66,12 @@ const Login = () => {
       return;
     }
 
-    setToast({ type: "success", message: "Login successful!" });
 
-    // navigate("/dashboard"); // hoặc nơi bạn muốn chuyển hướng
+    setTimeout(() => {
+      onLoginSuccess();
+      navigate("/", { state: { showWelcome: true } }); // Truyền flag
+    }, 2000);
   };
-
 
   return (
     <div className="container-fluid">
@@ -87,43 +84,56 @@ const Login = () => {
           <input
             className="form-control w-75 mb-3 mx-auto shadow p-2"
             type="text"
-            id="contactInfo"
-            name="contactInfo"
-            placeholder="  Enter Your Username"
-            required
+            id="userName"
+            name="userName"
+            placeholder="Enter Your Username"
+            value={formData.userName}
+            onChange={handleChange}
+            onBlur={() => handleValidation("userName")}
           />
 
           <input
             className="form-control w-75 mb-3 mx-auto p-2"
             type="password"
-            placeholder="  Password"
-            required
+            id="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            onBlur={() => handleValidation("password")}
           />
 
-          <button className="btn submit gradient-hover-effect w-75 mb-3 mx-auto">
+          <button
+            className="btn submit gradient-hover-effect w-75 mb-3 mx-auto"
+            onClick={handleSubmit}
+          >
             <b className="h3">Login</b>
           </button>
-          <div className="container w-75 mb-3 mx-auto"
-            style={{
-              height: "100px"
-            }}>
-
+          <div className="container w-75 mb-3 mx-auto" style={{ height: "100px" }}>
             <div className="row">
-
-              <div className="forgot-password text-left col-6" >
+              <div className="forgot-password text-left col-6">
                 <a href="#">Forgot password?</a>
               </div>
-              <div
-                className="create-account text-right col-6" style={{ textAlign: "right" }}
-              >
-                <a href="./Register">Create new account </a>
-              </div></div>
-
-          </div>
+              <div className="create-account text-right col-6" style={{ textAlign: "right" }}>
+                <a href="./Register">Create new account</a>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
+
+      {/* Toast Message */}
+      <div id="toast">
+        {toast && (
+          <ToastNotification
+            type={toast.type}
+            message={toast.message}
+            onClose={handleToastClose}
+            duration={4000}
+          />
+        )}
+      </div>
+    </div>
   );
 };
 

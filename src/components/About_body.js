@@ -22,7 +22,7 @@ const About_body = () => {
             <h1>Pham Ngoc Duong</h1>
             <h2>+112233445</h2>
 
-            <p>523H0016@email.com</p>
+            <p>523H0016@student.tdtu.edu.vn</p>
 
           </div>
 

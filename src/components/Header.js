@@ -4,45 +4,39 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import logo from "./Logo.png";
 
-export default function Header() {
+export default function Header({ isLoggedIn, setIsLoggedIn }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
 
-  // Danh sach san pham se lay tu json-server
-  
-      // Khởi tạo state để lưu products
-      const [products, setProducts] = useState([]);
-  
-      // Hàm fetch dữ liệu
-      async function getProducts() {
-          try {
-              const response = await fetch("http://localhost:3000/products/");
-              const Products = await response.json();
-              const formattedProducts = Products.map(product => ({
-                  id: Number(product.id),
-                  image: product.image,
-                  title: product.title,
-                  price: product.price,
-                  description: product.description,
-                  list_anh: product.list_anh,
-                  category: product.category
-              }));
-              return formattedProducts;
-          } catch (error) {
-              console.error("Lỗi khi fetch products:", error);
-              return [];
-          }
-      }
-  
-      // Sử dụng useEffect để gọi getProducts khi component mount
-      useEffect(() => {
-          getProducts().then(fetchedProducts => {
-              setProducts(fetchedProducts); // Cập nhật state
-          });
-      }, []); // Mảng rỗng nghĩa là chỉ chạy một lần khi component mount
-  
+  const [products, setProducts] = useState([]);
+
+  async function getProducts() {
+    try {
+      const response = await fetch("http://localhost:3000/products/");
+      const Products = await response.json();
+      const formattedProducts = Products.map(product => ({
+        id: Number(product.id),
+        image: product.image,
+        title: product.title,
+        price: product.price,
+        description: product.description,
+        list_anh: product.list_anh,
+        category: product.category
+      }));
+      return formattedProducts;
+    } catch (error) {
+      console.error("Lỗi khi fetch products:", error);
+      return [];
+    }
+  }
+
+  useEffect(() => {
+    getProducts().then(fetchedProducts => {
+      setProducts(fetchedProducts);
+    });
+  }, []);
 
   const handleSearchClick = () => {
     const query = searchQuery.trim().toLowerCase();
@@ -58,6 +52,16 @@ export default function Header() {
   const handleSelectProduct = (id) => {
     navigate(`/product-detail/${id}`);
     setShowOverlay(false);
+  };
+
+  const handleAuthClick = () => {
+    if (isLoggedIn) {
+      setIsLoggedIn(false); // Đăng xuất
+      alert("Log out successfully")
+      navigate("/");        // Có thể chuyển về trang chủ
+    } else {
+      navigate("/Login");   // Chuyển đến trang đăng nhập
+    }
   };
 
   return (
@@ -130,9 +134,12 @@ export default function Header() {
                         </NavLink>
                       </li>
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/Login">
-                          <b>Login</b>
-                        </NavLink>
+                        <button
+                          className={`nav-link bg-transparent border-0 ${isLoggedIn ? 'text-danger' : ''}`}
+                          onClick={handleAuthClick}
+                        >
+                          <b>{isLoggedIn ? "Logout" : "Login"}</b>
+                        </button>
                       </li>
                     </ul>
                   </div>
@@ -143,7 +150,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Overlay hiển thị sản phẩm gợi ý */}
       {showOverlay && (
         <div className="search-overlay" onClick={() => setShowOverlay(false)}>
           <div className="search-results-container" onClick={(e) => e.stopPropagation()}>

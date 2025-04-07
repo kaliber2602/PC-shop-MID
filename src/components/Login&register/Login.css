@@ -92,4 +92,9 @@
   border-color: #28a745 !important;
 }
 
+/* Chỉnh màu cho nút logout */
+.logout-red {
+  color: red;
+  font-weight: bold;
+}
 

@@ -4,10 +4,10 @@ import ProductCategoryBody from "../components/products/ProductCategoryBody";
 import Footer from "../components/Footer";
 import '../index.css';
 
-const ProductCategory = () => {
+const ProductCategory = ({ isLoggedIn, setIsLoggedIn }) => {
   return (
     <>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <ProductCategoryBody />
       <Footer />
     </>
