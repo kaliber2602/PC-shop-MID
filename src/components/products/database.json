@@ -703,32 +703,6 @@
       "category": "SSD & HDD (Storage)"
     },
     {
-      "id": "55",
-      "image": "Products/870 EVO 4TB SSD 3-bit MLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive.jpg",
-      "title": "870 EVO 4TB SSD 3-bit MLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive",
-      "price": "249.99",
-      "description": "Key Features\n \n \n  \t-    2.5\" Internal SSD\n  \n  \t-    SATA 3.0 6.0Gb/s\n  \n  \t-    3-bit MLC V-NAND\n  \n  \t-    Read Speed up to 560MBps\n  \n  \t-    Write Speed up to 530MBps",
-      "list_anh": [
-        "Products/870 EVO 4TB SSD 3-bit MLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_0.jpg",
-        "Products/870 EVO 4TB SSD 3-bit MLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_1.jpg",
-        "Products/870 EVO 4TB SSD 3-bit MLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_2.jpg"
-      ],
-      "category": "SSD & HDD (Storage)"
-    },
-    {
-      "id": "56",
-      "image": "Products/870 QVO 8TB SSD 4-bit QLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive.jpg",
-      "title": "870 QVO 8TB SSD 4-bit QLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive",
-      "price": "629.99",
-      "description": "Key Features\n \n \n  \t-    2.5\" Internal SSD\n  \n  \t-    SATA 3.0 6.0Gb/s\n  \n  \t-    4-bit QLC V-NAND\n  \n  \t-    Read Speed up to 560MBps\n  \n  \t-    Write Speed up to 530MBps",
-      "list_anh": [
-        "Products/870 QVO 8TB SSD 4-bit QLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_0.jpg",
-        "Products/870 QVO 8TB SSD 4-bit QLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_1.jpg",
-        "Products/870 QVO 8TB SSD 4-bit QLC V-NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_2.jpg"
-      ],
-      "category": "SSD & HDD (Storage)"
-    },
-    {
       "id": "57",
       "image": "Products/Black SN850X 1TB 112L BiCS5 TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 Internal SSD.jpg",
       "title": "Black SN850X 1TB 112L BiCS5 TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 Internal SSD",
@@ -751,19 +725,6 @@
         "Products/Blue SN5000 4TB 162L BiCS4 QLC NAND Flash NAND PCIe Gen 4 x4 NVMe M.2 Internal SSD_0.jpg",
         "Products/Blue SN5000 4TB 162L BiCS4 QLC NAND Flash NAND PCIe Gen 4 x4 NVMe M.2 Internal SSD_1.jpg",
         "Products/Blue SN5000 4TB 162L BiCS4 QLC NAND Flash NAND PCIe Gen 4 x4 NVMe M.2 Internal SSD_2.jpg"
-      ],
-      "category": "SSD & HDD (Storage)"
-    },
-    {
-      "id": "59",
-      "image": "Products/Blue SA510 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive.jpg",
-      "title": "Blue SA510 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive",
-      "price": "69.99",
-      "description": "Key Features\n \n \n  \t-    2.5\" Internal SSD\n  \n  \t-    SATA 3.0 6.0Gb/s\n  \n  \t-    3D NAND Flash\n  \n  \t-    Read Speed up to 560MBps\n  \n  \t-    Write Speed up to 520MBps",
-      "list_anh": [
-        "Products/Blue SA510 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_0.jpg",
-        "Products/Blue SA510 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_1.jpg",
-        "Products/Blue SA510 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_2.jpg"
       ],
       "category": "SSD & HDD (Storage)"
     },
@@ -794,19 +755,6 @@
       "category": "SSD & HDD (Storage)"
     },
     {
-      "id": "62",
-      "image": "Products/BX500 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive.jpg",
-      "title": "BX500 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive",
-      "price": "74.99",
-      "description": "Key Features\n \n \n  \t-    2.5\" Internal SSD\n  \n  \t-    SATA 3.0 6.0Gb/s\n  \n  \t-    Micron 3D NAND Flash\n  \n  \t-    Read Speed up to 540MBps\n  \n  \t-    Write Speed up to 500MBps",
-      "list_anh": [
-        "Products/BX500 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_0.jpg",
-        "Products/BX500 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_1.jpg",
-        "Products/BX500 1TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_2.jpg"
-      ],
-      "category": "SSD & HDD (Storage)"
-    },
-    {
       "id": "63",
       "image": "Products/P310 2TB 232L 3D TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 2230 Internal SSD.jpg",
       "title": "P310 2TB 232L 3D TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 2230 Internal SSD",
@@ -829,19 +777,6 @@
         "Products/Blue SN5000 2TB 3D TLC Nand PCIe Gen 4 x4 NVMe M.2 Internal SSD_0.jpg",
         "Products/Blue SN5000 2TB 3D TLC Nand PCIe Gen 4 x4 NVMe M.2 Internal SSD_1.jpg",
         "Products/Blue SN5000 2TB 3D TLC Nand PCIe Gen 4 x4 NVMe M.2 Internal SSD_2.jpg"
-      ],
-      "category": "SSD & HDD (Storage)"
-    },
-    {
-      "id": "65",
-      "image": "Products/BX500 480GB SSD Micron 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive.jpg",
-      "title": "BX500 480GB SSD Micron 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive",
-      "price": "36.99",
-      "description": "Key Features\n \n \n  \t-    2.5\" Internal SSD\n  \n  \t-    SATA 3.0 6.0Gb/s\n  \n  \t-    Micron 3D NAND Flash\n  \n  \t-    Read Speed up to 540MBps\n  \n  \t-    Write Speed up to 500MBps",
-      "list_anh": [
-        "Products/BX500 480GB SSD Micron 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_0.jpg",
-        "Products/BX500 480GB SSD Micron 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_1.jpg",
-        "Products/BX500 480GB SSD Micron 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_2.jpg"
       ],
       "category": "SSD & HDD (Storage)"
     },
@@ -907,32 +842,6 @@
         "Products/Black SN7100 1TB 3D TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 Internal SSD_0.jpg",
         "Products/Black SN7100 1TB 3D TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 Internal SSD_1.jpg",
         "Products/Black SN7100 1TB 3D TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 Internal SSD_2.jpg"
-      ],
-      "category": "SSD & HDD (Storage)"
-    },
-    {
-      "id": "71",
-      "image": "Products/Blue SA510 2TB SSD TLC NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive.jpg",
-      "title": "Blue SA510 2TB SSD TLC NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive",
-      "price": "129.99",
-      "description": "Key Features\n \n \n  \t-    2.5\" Internal SSD\n  \n  \t-    SATA 3.0 6.0Gb/s\n  \n  \t-    TLC NAND Flash\n  \n  \t-    Read Speed up to 560MBps\n  \n  \t-    Write Speed up to 520MBps",
-      "list_anh": [
-        "Products/Blue SA510 2TB SSD TLC NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_0.jpg",
-        "Products/Blue SA510 2TB SSD TLC NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_1.jpg",
-        "Products/Blue SA510 2TB SSD TLC NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_2.jpg"
-      ],
-      "category": "SSD & HDD (Storage)"
-    },
-    {
-      "id": "72",
-      "image": "Products/Blue 4TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive.jpg",
-      "title": "Blue 4TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive",
-      "price": "249.99",
-      "description": "Key Features\n \n \n  \t-    2.5\" Internal SSD\n  \n  \t-    SATA 3.0 6.0Gb/s\n  \n  \t-    3D NAND Flash\n  \n  \t-    Read Speed up to 560MBps\n  \n  \t-    Write Speed up to 520MBps",
-      "list_anh": [
-        "Products/Blue 4TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_0.jpg",
-        "Products/Blue 4TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_1.jpg",
-        "Products/Blue 4TB SSD 3D NAND SATA III 6Gb/s 2.5&quot; Internal Solid State Drive_2.jpg"
       ],
       "category": "SSD & HDD (Storage)"
     },
@@ -1441,7 +1350,7 @@
         "Products/AirPods Pro (2nd Gen) True Wireless Bluetooth Earbuds with MagSafe Charging Case - White_1.jpg",
         "Products/AirPods Pro (2nd Gen) True Wireless Bluetooth Earbuds with MagSafe Charging Case - White_2.jpg"
       ],
-      "category": "Speakers"
+      "category": "Headphones"
     },
     {
       "id": "112",
@@ -1454,7 +1363,7 @@
         "Products/AirPods 4 True Wireless Bluetooth Earbuds - White_1.jpg",
         "Products/AirPods 4 True Wireless Bluetooth Earbuds - White_2.jpg"
       ],
-      "category": "Speakers"
+      "category": "Headphones"
     },
     {
       "id": "113",
@@ -1467,7 +1376,7 @@
         "Products/DT 990 Pro 250 ohm Open-back Studio Headphones - Black_1.jpg",
         "Products/DT 990 Pro 250 ohm Open-back Studio Headphones - Black_2.jpg"
       ],
-      "category": "Speakers"
+      "category": "Headphones"
     },
     {
       "id": "114",
@@ -1480,7 +1389,7 @@
         "Products/AirPods 4 Active Noise Cancelling True Wireless Bluetooth Earbuds - White_1.jpg",
         "Products/AirPods 4 Active Noise Cancelling True Wireless Bluetooth Earbuds - White_2.jpg"
       ],
-      "category": "Speakers"
+      "category": "Headphones"
     },
     {
       "id": "115",
@@ -1493,7 +1402,7 @@
         "Products/OpenRun Pro Mini 2 Open-Ear Bone Conduction Headphones - Black_1.jpg",
         "Products/OpenRun Pro Mini 2 Open-Ear Bone Conduction Headphones - Black_2.jpg"
       ],
-      "category": "Speakers"
+      "category": "Headphones"
     },
     {
       "id": "116",
@@ -1506,7 +1415,7 @@
         "Products/OpenRun Pro 2 Wireless Bluetooth Bone Conduction Headphones - Black_1.jpg",
         "Products/OpenRun Pro 2 Wireless Bluetooth Bone Conduction Headphones - Black_2.jpg"
       ],
-      "category": "Speakers"
+      "category": "Headphones"
     },
     {
       "id": "117",
@@ -1519,7 +1428,7 @@
         "Products/Soundcore Q20i Hybrid Active Noise Cancelling Bluetooth Wireless Headphones - Black_1.jpg",
         "Products/Soundcore Q20i Hybrid Active Noise Cancelling Bluetooth Wireless Headphones - Black_2.jpg"
       ],
-      "category": "Speakers"
+      "category": "Headphones"
     },
     {
       "id": "118",
@@ -1532,7 +1441,7 @@
         "Products/QuietComfort Ultra Bluetooth Wireless Active Noise Cancelling Headphones - Black_1.jpg",
         "Products/QuietComfort Ultra Bluetooth Wireless Active Noise Cancelling Headphones - Black_2.jpg"
       ],
-      "category": "Speakers"
+      "category": "Headphones"
     },
     {
       "id": "119",
@@ -1545,7 +1454,7 @@
         "Products/Z407 2.1 Channel Bluetooth Computer Speakers - Black_1.jpg",
         "Products/Z407 2.1 Channel Bluetooth Computer Speakers - Black_2.jpg"
       ],
-      "category": "Headphones"
+      "category": "Speakers"
     },
     {
       "id": "120",
@@ -1558,7 +1467,7 @@
         "Products/Leviathan V2 X PC Gaming Soundbar Speaker_1.jpg",
         "Products/Leviathan V2 X PC Gaming Soundbar Speaker_2.jpg"
       ],
-      "category": "Headphones"
+      "category": "Speakers"
     },
     {
       "id": "121",
@@ -1571,7 +1480,7 @@
         "Products/Pebble SE Minimalist 2.0 Channel Computer Speakers - Black_1.jpg",
         "Products/Pebble SE Minimalist 2.0 Channel Computer Speakers - Black_2.jpg"
       ],
-      "category": "Headphones"
+      "category": "Speakers"
     },
     {
       "id": "122",
@@ -1584,7 +1493,7 @@
         "Products/SK473 Desktop Speakers USB 2.0 Powered 6W Computer Speaker for PC and Laptop - Black_1.jpg",
         "Products/SK473 Desktop Speakers USB 2.0 Powered 6W Computer Speaker for PC and Laptop - Black_2.jpg"
       ],
-      "category": "Headphones"
+      "category": "Speakers"
     },
     {
       "id": "123",
@@ -1597,7 +1506,7 @@
         "Products/Stage Air V2 Compact Under-Monitor USB Soundbar with Bluetooth_1.jpg",
         "Products/Stage Air V2 Compact Under-Monitor USB Soundbar with Bluetooth_2.jpg"
       ],
-      "category": "Headphones"
+      "category": "Speakers"
     },
     {
       "id": "124",
@@ -1610,7 +1519,7 @@
         "Products/CR8-XBT 8&quot; 2 Channel Stereo Multimedia Monitor Speakers with Bluetooth - Black_1.jpg",
         "Products/CR8-XBT 8&quot; 2 Channel Stereo Multimedia Monitor Speakers with Bluetooth - Black_2.jpg"
       ],
-      "category": "Headphones"
+      "category": "Speakers"
     },
     {
       "id": "125",
@@ -1623,7 +1532,7 @@
         "Products/Eris 5BT Studio Monitor Speakers - Pair_1.jpg",
         "Products/Eris 5BT Studio Monitor Speakers - Pair_2.jpg"
       ],
-      "category": "Headphones"
+      "category": "Speakers"
     },
     {
       "id": "126",
@@ -2406,19 +2315,6 @@
       "category": "Mousepads"
     },
     {
-      "id": "186",
-      "image": "Products/Higround BLACKICE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - Black.jpg",
-      "title": "Higround BLACKICE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - Black",
-      "price": "39.99",
-      "description": "Key Features\n \n \n  \t-    XL 15 x 35 Inches\n  \n  \t-    Cloth Surface, 4mm Rubber Base\n  \n  \t-    Tear resistant, Warp Resistant, Wear Resistant",
-      "list_anh": [
-        "Products/Higround BLACKICE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - Black_0.jpg",
-        "Products/Higround BLACKICE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - Black_1.jpg",
-        "Products/Higround BLACKICE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - Black_2.jpg"
-      ],
-      "category": "Mousepads"
-    },
-    {
       "id": "187",
       "image": "Products/XXL (35 x 17 In) Gaming Mousepad - Komorebi.jpg",
       "title": "XXL (35 x 17 In) Gaming Mousepad - Komorebi",
@@ -2493,19 +2389,6 @@
         "Products/Qck XXL Gaming Mouse Pad_0.jpg",
         "Products/Qck XXL Gaming Mouse Pad_1.jpg",
         "Products/Qck XXL Gaming Mouse Pad_2.jpg"
-      ],
-      "category": "Mousepads"
-    },
-    {
-      "id": "193",
-      "image": "Products/Higround SNOWSTONE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - White.jpg",
-      "title": "Higround SNOWSTONE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - White",
-      "price": "39.99",
-      "description": "Key Features\n \n \n  \t-    XL 15 x 35 Inches\n  \n  \t-    Cloth Surface, 4mm Rubber Base\n  \n  \t-    Tear resistant, Warp Resistant, Wear Resistant",
-      "list_anh": [
-        "Products/Higround SNOWSTONE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - White_0.jpg",
-        "Products/Higround SNOWSTONE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - White_1.jpg",
-        "Products/Higround SNOWSTONE XL (35.4 x 15.8 in.) Gaming/Mouse Pad - White_2.jpg"
       ],
       "category": "Mousepads"
     },
@@ -2981,7 +2864,7 @@
       "id": "230",
       "image": "Products/Thunderbolt Dock - WD22TB4.jpg",
       "title": "Thunderbolt Dock - WD22TB4",
-      "price": "$259.99",
+      "price": "259.99",
       "description": "Key Features\n \n \n  \t-    Thunderbolt 4 (Type-C) Connection\n  \n  \t-    Black Plastic Enclosure\n  \n  \t-    AC Adapter Powered\n  \n  \t-    Windows 10; Windows 11",
       "list_anh": [
         "Products/Thunderbolt Dock - WD22TB4_0.jpg",
@@ -2994,7 +2877,7 @@
       "id": "231",
       "image": "Products/Universal Hybrid Displaylink Docking Station.jpg",
       "title": "Universal Hybrid Displaylink Docking Station",
-      "price": "$179.99",
+      "price": "179.99",
       "description": "Key Features\n \n \n  \t-    USB 3.2 (Gen 2 Type-C) Connection\n  \n  \t-    Black Plastic Enclosure\n  \n  \t-    USB Bus Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0)",
       "list_anh": [
         "Products/Universal Hybrid Displaylink Docking Station_0.jpg",
@@ -3007,7 +2890,7 @@
       "id": "232",
       "image": "Products/Universal Dock - UD22.jpg",
       "title": "Universal Dock - UD22",
-      "price": "$179.99",
+      "price": "179.99",
       "description": "Key Features\n \n \n  \t-    USB 3.2 (Gen 2 Type-C) Connection\n  \n  \t-    Black Plastic Enclosure\n  \n  \t-    AC Adapter Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0); Universal; Windows 10; Windows 11",
       "list_anh": [
         "Products/Universal Dock - UD22_0.jpg",
@@ -3020,7 +2903,7 @@
       "id": "233",
       "image": "Products/JCD543 USB-C Triple Display Docking Station.jpg",
       "title": "JCD543 USB-C Triple Display Docking Station",
-      "price": "$109.99",
+      "price": "109.99",
       "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 1 Type-C) Connection\n  \n  \t-    Black/Silver Aluminum Enclosure\n  \n  \t-    USB Bus or AC Adapter (Optional) Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0)",
       "list_anh": [
         "Products/JCD543 USB-C Triple Display Docking Station_0.jpg",
@@ -3030,23 +2913,10 @@
       "category": "Hubs & Docking Stations"
     },
     {
-      "id": "234",
-      "image": "Products/WD19S Dock Station USB-C, USB-A, HDMI, DP, RJ-45 w/ 130W Adapter.jpg",
-      "title": "WD19S Dock Station USB-C, USB-A, HDMI, DP, RJ-45 w/ 130W Adapter",
-      "price": "$199.99",
-      "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 2 Type-C) Connection\n  \n  \t-    Black Plastic Enclosure\n  \n  \t-    AC Adapter Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0)",
-      "list_anh": [
-        "Products/WD19S Dock Station USB-C, USB-A, HDMI, DP, RJ-45 w/ 130W Adapter_0.jpg",
-        "Products/WD19S Dock Station USB-C, USB-A, HDMI, DP, RJ-45 w/ 130W Adapter_1.jpg",
-        "Products/WD19S Dock Station USB-C, USB-A, HDMI, DP, RJ-45 w/ 130W Adapter_2.jpg"
-      ],
-      "category": "Hubs & Docking Stations"
-    },
-    {
       "id": "235",
       "image": "Products/WD19S USB-C, USB-A, HDMI, DP, RJ-45 180W Docking Station.jpg",
       "title": "WD19S USB-C, USB-A, HDMI, DP, RJ-45 180W Docking Station",
-      "price": "$199.99",
+      "price": "199.99",
       "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 2 Type-C) Connection\n  \n  \t-    Black Plastic Enclosure\n  \n  \t-    AC Adapter Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0)",
       "list_anh": [
         "Products/WD19S USB-C, USB-A, HDMI, DP, RJ-45 180W Docking Station_0.jpg",
@@ -3056,23 +2926,10 @@
       "category": "Hubs & Docking Stations"
     },
     {
-      "id": "236",
-      "image": "Products/JCD371 USB-C w/ PD 2.0, 2 USB Type-A, HDMI Port Hub.jpg",
-      "title": "JCD371 USB-C w/ PD 2.0, 2 USB Type-A, HDMI Port Hub",
-      "price": "$39.99",
-      "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 1 Type-C) Connection\n  \n  \t-    Silver/Gray Aluminum Enclosure\n  \n  \t-    USB Bus or AC Adapter Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0)",
-      "list_anh": [
-        "Products/JCD371 USB-C w/ PD 2.0, 2 USB Type-A, HDMI Port Hub_0.jpg",
-        "Products/JCD371 USB-C w/ PD 2.0, 2 USB Type-A, HDMI Port Hub_1.jpg",
-        "Products/JCD371 USB-C w/ PD 2.0, 2 USB Type-A, HDMI Port Hub_2.jpg"
-      ],
-      "category": "Hubs & Docking Stations"
-    },
-    {
       "id": "237",
       "image": "Products/12-in-1 Multifunctional Dock.jpg",
       "title": "12-in-1 Multifunctional Dock",
-      "price": "$129.99",
+      "price": "129.99",
       "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 1 Type-C) Connection\n  \n  \t-    Black Aluminum Enclosure\n  \n  \t-    USB Bus Powered\n  \n  \t-    Macbook Pro; USB-C System (DP Alt Mode; PD 2.0; 3.0); Windows 10; Windows 11",
       "list_anh": [
         "Products/12-in-1 Multifunctional Dock_0.jpg",
@@ -3085,7 +2942,7 @@
       "id": "238",
       "image": "Products/GUD3C02B Dock Pro 85W USB-C 4K Ultra-Slim Station.jpg",
       "title": "GUD3C02B Dock Pro 85W USB-C 4K Ultra-Slim Station",
-      "price": "$59.99",
+      "price": "59.99",
       "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 1 Type-C) Connection\n  \n  \t-    Black/Silver Aluminum Enclosure\n  \n  \t-    USB Bus Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0)",
       "list_anh": [
         "Products/GUD3C02B Dock Pro 85W USB-C 4K Ultra-Slim Station_0.jpg",
@@ -3098,7 +2955,7 @@
       "id": "239",
       "image": "Products/ThinkPad Universal Thunderbolt 4 Dock.jpg",
       "title": "ThinkPad Universal Thunderbolt 4 Dock",
-      "price": "$349.99",
+      "price": "349.99",
       "description": "Key Features\n \n \n  \t-    Thunderbolt 4 (Type-C) Connection\n  \n  \t-    Black Aluminum Enclosure\n  \n  \t-    AC Adapter Powered\n  \n  \t-    Windows 10; Windows 11",
       "list_anh": [
         "Products/ThinkPad Universal Thunderbolt 4 Dock_0.jpg",
@@ -3111,7 +2968,7 @@
       "id": "240",
       "image": "Products/Surface Thunderbolt 4 Dock.jpg",
       "title": "Surface Thunderbolt 4 Dock",
-      "price": "$299.99",
+      "price": "299.99",
       "description": "Key Features\n \n \n  \t-    USB4 (Type-C) Connection\n  \n  \t-    Black Plastic Enclosure\n  \n  \t-    USB Bus Powered\n  \n  \t-    USB4 System (DP Alt Mode; PD 2.0; 3.0)",
       "list_anh": [
         "Products/Surface Thunderbolt 4 Dock_0.jpg",
@@ -3124,7 +2981,7 @@
       "id": "241",
       "image": "Products/USB Type-C to Dual HDMI Multi-Monitor Adapter.jpg",
       "title": "USB Type-C to Dual HDMI Multi-Monitor Adapter",
-      "price": "$74.99",
+      "price": "74.99",
       "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 1 Type-C) Connection\n  \n  \t-    Gray Aluminum\n  \n  \t-    USB Bus Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0)",
       "list_anh": [
         "Products/USB Type-C to Dual HDMI Multi-Monitor Adapter_0.jpg",
@@ -3137,7 +2994,7 @@
       "id": "242",
       "image": "Products/Powerful 13-in-1 triple display Dock.jpg",
       "title": "Powerful 13-in-1 triple display Dock",
-      "price": "$149.99",
+      "price": "149.99",
       "description": "Key Features\n \n \n  \t-    USB 3.2 (Gen 2 Type-C) Connection\n  \n  \t-    Black Aluminum Enclosure\n  \n  \t-    USB Bus Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0)",
       "list_anh": [
         "Products/Powerful 13-in-1 triple display Dock_0.jpg",
@@ -3150,7 +3007,7 @@
       "id": "243",
       "image": "Products/USB 3.0 Mini Dock.jpg",
       "title": "USB 3.0 Mini Dock",
-      "price": "$69.99",
+      "price": "69.99",
       "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 1 Type-A) Connection\n  \n  \t-    Black Aluminum Enclosure\n  \n  \t-    AC Adapter Powered\n  \n  \t-    Universal",
       "list_anh": [
         "Products/USB 3.0 Mini Dock_0.jpg",
@@ -3163,7 +3020,7 @@
       "id": "244",
       "image": "Products/6-Port Docking Station for Steam Deck.jpg",
       "title": "6-Port Docking Station for Steam Deck",
-      "price": "$39.99",
+      "price": "39.99",
       "description": "Key Features\n \n \n  \t-    USB 3.2 (Gen 1 Type-C) Connection\n  \n  \t-    Black Plastic Enclosure\n  \n  \t-    USB Bus Powered\n  \n  \t-    Steam Deck",
       "list_anh": [
         "Products/6-Port Docking Station for Steam Deck_0.jpg",
@@ -3176,7 +3033,7 @@
       "id": "245",
       "image": "Products/Performance Dock WD19DCS Docking Station with 240W Power Adapter.jpg",
       "title": "Performance Dock WD19DCS Docking Station with 240W Power Adapter",
-      "price": "$244.99",
+      "price": "244.99",
       "description": "Key Features\n \n \n  \t-    USB 3.1 (Gen 1 Type-C) Connection\n  \n  \t-    Black Plastic Enclosure\n  \n  \t-    USB Bus or AC Adapter Powered\n  \n  \t-    USB-C System (DP Alt Mode; PD 2.0; 3.0); Windows 10; Windows 11",
       "list_anh": [
         "Products/Performance Dock WD19DCS Docking Station with 240W Power Adapter_0.jpg",
@@ -3189,7 +3046,7 @@
       "id": "246",
       "image": "Products/SD5900T EQ Thunderbolt 4 Dock - Midnight Blue.jpg",
       "title": "SD5900T EQ Thunderbolt 4 Dock - Midnight Blue",
-      "price": "$299.99",
+      "price": "299.99",
       "description": "Key Features\n \n \n  \t-    Thunderbolt 4 (Type-C) Connection\n  \n  \t-    Blue Aluminum\n  \n  \t-    AC Adapter Powered\n  \n  \t-    macOS",
       "list_anh": [
         "Products/SD5900T EQ Thunderbolt 4 Dock - Midnight Blue_0.jpg",
@@ -3202,7 +3059,7 @@
       "id": "247",
       "image": "Products/Thunderbolt 4 Multi-Display Docking Station.jpg",
       "title": "Thunderbolt 4 Multi-Display Docking Station",
-      "price": "$299.99",
+      "price": "299.99",
       "description": "Key Features\n \n \n  \t-    Thunderbolt 4 (Type-C) Connection\n  \n  \t-    AC Adapter Powered\n  \n  \t-    Windows; macOS",
       "list_anh": [
         "Products/Thunderbolt 4 Multi-Display Docking Station_0.jpg",
@@ -3210,6 +3067,539 @@
         "Products/Thunderbolt 4 Multi-Display Docking Station_2.jpg"
       ],
       "category": "Hubs & Docking Stations"
+    },
+    {
+      "id": "248",
+      "image": "Products/FREDDE Gaming desk, black, 140-185x74x146 cm.jpg",
+      "title": "FREDDE Gaming desk, black, 140-185x74x146 cm",
+      "price": "199.0",
+      "description": "How do you make the perfect gaming station? That's what we set out to do with FREDDE desk by researching competitive gaming and enlisting a gamer designer of our own.",
+      "list_anh": [
+        "Products/FREDDE Gaming desk, black, 140-185x74x146 cm_0.jpg",
+        "Products/FREDDE Gaming desk, black, 140-185x74x146 cm_1.jpg",
+        "Products/FREDDE Gaming desk, black, 140-185x74x146 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "249",
+      "image": "Products/UTESPELARE Gaming desk, black, 160x80 cm.jpg",
+      "title": "UTESPELARE Gaming desk, black, 160x80 cm",
+      "price": "129.0",
+      "description": "Raise the large, sturdy UTESPELARE gaming desk to a height that optimally suits you. The metal mesh at the back of the table top allows air to circulate and cool your PC when the match heats up.",
+      "list_anh": [
+        "Products/UTESPELARE Gaming desk, black, 160x80 cm_0.jpg",
+        "Products/UTESPELARE Gaming desk, black, 160x80 cm_1.jpg",
+        "Products/UTESPELARE Gaming desk, black, 160x80 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "250",
+      "image": "Products/UTVISNING Gaming desk with shelf, black, 120x60 cm.jpg",
+      "title": "UTVISNING Gaming desk with shelf, black, 120x60 cm",
+      "price": "90.0",
+      "description": "This gaming desk is perfect for creating a compact space for playing. Height adjustment, cable management, a shelf for monitors and a computer tower solution – all designed so you can focus on the match.",
+      "list_anh": [
+        "Products/UTVISNING Gaming desk with shelf, black, 120x60 cm_0.jpg",
+        "Products/UTVISNING Gaming desk with shelf, black, 120x60 cm_1.jpg",
+        "Products/UTVISNING Gaming desk with shelf, black, 120x60 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "251",
+      "image": "Products/UTMANING Gaming desk, black, 160x80 cm.jpg",
+      "title": "UTMANING Gaming desk, black, 160x80 cm",
+      "price": "165.0",
+      "description": "Functional design, smart details and the possibility to set the height during assembly. This desk helps you find your most comfortable gaming position. Quality tested for many years of use.",
+      "list_anh": [
+        "Products/UTMANING Gaming desk, black, 160x80 cm_0.jpg",
+        "Products/UTMANING Gaming desk, black, 160x80 cm_1.jpg",
+        "Products/UTMANING Gaming desk, black, 160x80 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "252",
+      "image": "Products/UTMANING Gaming desk sit-stand, electric-black, 160x80 cm.jpg",
+      "title": "UTMANING Gaming desk sit-stand, electric-black, 160x80 cm",
+      "price": "405.0",
+      "description": "The electric UTMANING gaming desk helps you play better and longer since you can choose your most ergonomic position. Quality tested for years of ups and downs, not just in the game.",
+      "list_anh": [
+        "Products/UTMANING Gaming desk sit-stand, electric-black, 160x80 cm_0.jpg",
+        "Products/UTMANING Gaming desk sit-stand, electric-black, 160x80 cm_1.jpg",
+        "Products/UTMANING Gaming desk sit-stand, electric-black, 160x80 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "253",
+      "image": "Products/HUVUDSPELARE Gaming desk, black, 140x80 cm.jpg",
+      "title": "HUVUDSPELARE Gaming desk, black, 140x80 cm",
+      "price": "115.0",
+      "description": "This gaming table has all those key features that help you play at the top of your game: stability, cable management and a hook for your headphones. A good choice for those who want to focus on the match.",
+      "list_anh": [
+        "Products/HUVUDSPELARE Gaming desk, black, 140x80 cm_0.jpg",
+        "Products/HUVUDSPELARE Gaming desk, black, 140x80 cm_1.jpg",
+        "Products/HUVUDSPELARE Gaming desk, black, 140x80 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "254",
+      "image": "Products/BRÄNNBOLL Gaming station, light grey-white, 100x72x180 cm.jpg",
+      "title": "BRÄNNBOLL Gaming station, light grey-white, 100x72x180 cm",
+      "price": "250.0",
+      "description": "Always ready. This flexible gaming station holds all your gear, so you can quickly get started. And when you're done playing, you can hide everything behind the doors – even your gaming chair.",
+      "list_anh": [
+        "Products/BRÄNNBOLL Gaming station, light grey-white, 100x72x180 cm_0.jpg",
+        "Products/BRÄNNBOLL Gaming station, light grey-white, 100x72x180 cm_1.jpg",
+        "Products/BRÄNNBOLL Gaming station, light grey-white, 100x72x180 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "255",
+      "image": "Products/UPPSPEL Underframe sit-stand f table tp, el, black, 180-140x80 cm.jpg",
+      "title": "UPPSPEL Underframe sit-stand f table tp, el, black, 180-140x80 cm",
+      "price": "360.0",
+      "description": "The height of the electric underframe can be adjusted from 72 to 120 cm, so you can always sit or stand at a comfortable height.",
+      "list_anh": [
+        "Products/UPPSPEL Underframe sit-stand f table tp, el, black, 180-140x80 cm_0.jpg",
+        "Products/UPPSPEL Underframe sit-stand f table tp, el, black, 180-140x80 cm_1.jpg",
+        "Products/UPPSPEL Underframe sit-stand f table tp, el, black, 180-140x80 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "256",
+      "image": "Products/UPPSPEL Gaming desk, black, 180x80 cm.jpg",
+      "title": "UPPSPEL Gaming desk, black, 180x80 cm",
+      "price": "449.0",
+      "description": "UPPSPEL gaming desk helps you perform at your best. It’s large, durable and sturdy. You can also quickly and easily adjust the height so that you always enjoy the optimal position during the match.",
+      "list_anh": [
+        "Products/UPPSPEL Gaming desk, black, 180x80 cm_0.jpg",
+        "Products/UPPSPEL Gaming desk, black, 180x80 cm_1.jpg",
+        "Products/UPPSPEL Gaming desk, black, 180x80 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "257",
+      "image": "Products/UPPSPEL Gaming desk, black, 140x80 cm.jpg",
+      "title": "UPPSPEL Gaming desk, black, 140x80 cm",
+      "price": "435.0",
+      "description": "UPPSPEL gaming desk helps you perform at your best. It’s large, durable and sturdy. You can also quickly and easily adjust the height so that you always enjoy the optimal position during the match.",
+      "list_anh": [
+        "Products/UPPSPEL Gaming desk, black, 140x80 cm_0.jpg",
+        "Products/UPPSPEL Gaming desk, black, 140x80 cm_1.jpg",
+        "Products/UPPSPEL Gaming desk, black, 140x80 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "258",
+      "image": "Products/UPPSPEL Table top, black, 180 cm.jpg",
+      "title": "UPPSPEL Table top, black, 180 cm",
+      "price": "89.0",
+      "description": "You can position the table top in two different ways. If you have the contour shape facing forwards, you enjoy relief for forearms and wrists – and having it at the back creates a gap where you can lead all the cables down.",
+      "list_anh": [
+        "Products/UPPSPEL Table top, black, 180 cm_0.jpg",
+        "Products/UPPSPEL Table top, black, 180 cm_1.jpg",
+        "Products/UPPSPEL Table top, black, 180 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "259",
+      "image": "Products/UPPSPEL Table top, black, 140 cm.jpg",
+      "title": "UPPSPEL Table top, black, 140 cm",
+      "price": "75.0",
+      "description": "You can position the table top in two different ways. If you have the contour shape facing forwards, you enjoy relief for forearms and wrists – and having it at the back creates a gap where you can lead all the cables down.",
+      "list_anh": [
+        "Products/UPPSPEL Table top, black, 140 cm_0.jpg",
+        "Products/UPPSPEL Table top, black, 140 cm_1.jpg",
+        "Products/UPPSPEL Table top, black, 140 cm_2.jpg"
+      ],
+      "category": "Desks"
+    },
+    {
+      "id": "260",
+      "image": "Products/STYRSPEL Gaming chair, dark gray-gray.jpg",
+      "title": "STYRSPEL Gaming chair, dark gray-gray",
+      "price": "369.99",
+      "description": "STYRSPEL gaming chair helps you play at the top of your game. Adjust the headrest, lumbar support, armrests and the seat height and depth – the mesh material keeps you cool when the game heats up!",
+      "list_anh": [
+        "Products/STYRSPEL Gaming chair, dark gray-gray_0.jpg",
+        "Products/STYRSPEL Gaming chair, dark gray-gray_1.jpg",
+        "Products/STYRSPEL Gaming chair, dark gray-gray_2.jpg"
+      ],
+      "category": "Chairs"
+    },
+    {
+      "id": "261",
+      "image": "Products/UTESPELARE Gaming chair, Bomstad black.jpg",
+      "title": "UTESPELARE Gaming chair, Bomstad black",
+      "price": "139.99",
+      "description": "UTESPELARE gaming chair gives your body a nice support with a synchronized seat and back tilt that precisely follows your movements during the entire match. And after playing, you can sit back to recharge.",
+      "list_anh": [
+        "Products/UTESPELARE Gaming chair, Bomstad black_0.jpg",
+        "Products/UTESPELARE Gaming chair, Bomstad black_1.jpg",
+        "Products/UTESPELARE Gaming chair, Bomstad black_2.jpg"
+      ],
+      "category": "Chairs"
+    },
+    {
+      "id": "262",
+      "image": "Products/GRUPPSPEL Gaming chair, Gunnared beige.jpg",
+      "title": "GRUPPSPEL Gaming chair, Gunnared beige",
+      "price": "399.99",
+      "description": "Cool gaming chair that blends in nicely with other decor. Equipped with many smart functions that allow you to adjust the back, seat, recline angle, tilt, armrests and headrest to sit really comfy.",
+      "list_anh": [
+        "Products/GRUPPSPEL Gaming chair, Gunnared beige_0.jpg",
+        "Products/GRUPPSPEL Gaming chair, Gunnared beige_1.jpg",
+        "Products/GRUPPSPEL Gaming chair, Gunnared beige_2.jpg"
+      ],
+      "category": "Chairs"
+    },
+    {
+      "id": "263",
+      "image": "Products/MATCHSPEL Gaming chair, Bomstad light gray.jpg",
+      "title": "MATCHSPEL Gaming chair, Bomstad light gray",
+      "price": "299.99",
+      "description": "MATCHSPEL gaming chair helps you play at the top of your game. Your whole body enjoys nice support and you can adjust the height of the chair, neck and armrests to sit really comfy when the game begins.",
+      "list_anh": [
+        "Products/MATCHSPEL Gaming chair, Bomstad light gray_0.jpg",
+        "Products/MATCHSPEL Gaming chair, Bomstad light gray_1.jpg",
+        "Products/MATCHSPEL Gaming chair, Bomstad light gray_2.jpg"
+      ],
+      "category": "Chairs"
+    },
+    {
+      "id": "264",
+      "image": "Products/HUVUDSPELARE Gaming chair, black.jpg",
+      "title": "HUVUDSPELARE Gaming chair, black",
+      "price": "89.99",
+      "description": "Adjust the height and angle to sit really comfortably, and let the game begin. The backrest gives you good lumbar support – and even when the game heats up, you stay cool thanks to the mesh net.",
+      "list_anh": [
+        "Products/HUVUDSPELARE Gaming chair, black_0.jpg",
+        "Products/HUVUDSPELARE Gaming chair, black_1.jpg",
+        "Products/HUVUDSPELARE Gaming chair, black_2.jpg"
+      ],
+      "category": "Chairs"
+    },
+    {
+      "id": "265",
+      "image": "Products/LÖPARBANA Gaming chair, Vissle dark gray.jpg",
+      "title": "LÖPARBANA Gaming chair, Vissle dark gray",
+      "price": "169.99",
+      "description": "LÖPARBANA gaming chair helps you play at the top of your game. Adjust the headrest and seat height to enjoy a comfortable support that allows you to focus when the match begins.",
+      "list_anh": [
+        "Products/LÖPARBANA Gaming chair, Vissle dark gray_0.jpg",
+        "Products/LÖPARBANA Gaming chair, Vissle dark gray_1.jpg",
+        "Products/LÖPARBANA Gaming chair, Vissle dark gray_2.jpg"
+      ],
+      "category": "Chairs"
+    },
+    {
+      "id": "266",
+      "image": "Products/BRÄNNBOLL Gaming lounge chair, Knisa bright blue.jpg",
+      "title": "BRÄNNBOLL Gaming lounge chair, Knisa bright blue",
+      "price": "249.99",
+      "description": "Armchair or lounge chair? The choice is yours since the seat cushion is easy to fold out and in. No matter what you prefer, you sit really comfortably while gaming or relaxing.",
+      "list_anh": [
+        "Products/BRÄNNBOLL Gaming lounge chair, Knisa bright blue_0.jpg",
+        "Products/BRÄNNBOLL Gaming lounge chair, Knisa bright blue_1.jpg",
+        "Products/BRÄNNBOLL Gaming lounge chair, Knisa bright blue_2.jpg"
+      ],
+      "category": "Chairs"
+    },
+    {
+      "id": "267",
+      "image": "Products/BRÄNNBOLL Gaming easy chair, gray-bright yellow.jpg",
+      "title": "BRÄNNBOLL Gaming easy chair, gray-bright yellow",
+      "price": "149.99",
+      "description": "A simple, yet elegant easy chair that follows your movements and makes you feel like you’re part of the game. You can tilt forward and back, swing from side to side and rock back and forth.",
+      "list_anh": [
+        "Products/BRÄNNBOLL Gaming easy chair, gray-bright yellow_0.jpg",
+        "Products/BRÄNNBOLL Gaming easy chair, gray-bright yellow_1.jpg",
+        "Products/BRÄNNBOLL Gaming easy chair, gray-bright yellow_2.jpg"
+      ],
+      "category": "Chairs"
+    },
+    {
+      "id": "268",
+      "image": "Products/255 G10 15.6&quot; Laptop Computer - Dark Ash Silver.jpg",
+      "title": "255 G10 15.6&quot; Laptop Computer - Dark Ash Silver",
+      "price": "449.99",
+      "description": "Key Features\n \n \n  \t-    AMD Ryzen 7 7730U (2.0GHz) Processor\n  \n  \t-    16GB DDR4-3200 RAM\n  \n  \t-    AMD Radeon Integrated Graphics\n  \n  \t-    512GB SSD\n  \n  \t-    15.6\" Full HD Display\n  \n  \t-    Wireless LAN WiFi 6 (802.11ax), Bluetooth 5.3\n  \n  \t-    3.30 lbs. (1.50 kg)\n  \n  \t-    Windows 11 Pro",
+      "list_anh": [
+        "Products/255 G10 15.6&quot; Laptop Computer - Dark Ash Silver_0.jpg",
+        "Products/255 G10 15.6&quot; Laptop Computer - Dark Ash Silver_1.jpg",
+        "Products/255 G10 15.6&quot; Laptop Computer - Dark Ash Silver_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "269",
+      "image": "Products/V15 G4 IRU 15.6&quot; Laptop Computer - Business Black.jpg",
+      "title": "V15 G4 IRU 15.6&quot; Laptop Computer - Business Black",
+      "price": "549.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core i5 13420H (1.5GHz) Processor\n  \n  \t-    16GB DDR4-3200 RAM\n  \n  \t-    Intel UHD Graphics Integrated Graphics\n  \n  \t-    1TB PCIe Gen4 x4 NVMe M.2 SSD\n  \n  \t-    15.6\" Full HD Anti-Glare Display\n  \n  \t-    Gigabit LAN, 2x2 WiFi 6 (802.11ax), Bluetooth 5.2\n  \n  \t-    Windows 11 Pro",
+      "list_anh": [
+        "Products/V15 G4 IRU 15.6&quot; Laptop Computer - Business Black_0.jpg",
+        "Products/V15 G4 IRU 15.6&quot; Laptop Computer - Business Black_1.jpg",
+        "Products/V15 G4 IRU 15.6&quot; Laptop Computer - Business Black_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "270",
+      "image": "Products/Yoga 7 14IML9 14&quot; 2-in-1 Laptop Computer - Storm Grey.jpg",
+      "title": "Yoga 7 14IML9 14&quot; 2-in-1 Laptop Computer - Storm Grey",
+      "price": "629.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core Ultra 5 125U (1.3GHz) Processor\n  \n  \t-    16GB LPDDR5x-7467 RAM\n  \n  \t-    Intel Graphics Integrated Graphics\n  \n  \t-    512GB PCIe Gen4 x4 NVMe M.2 SSD\n  \n  \t-    14\" WUXGA IPS Touchscreen Glossy Display\n  \n  \t-    2x2 Wireless LAN WiFi 6E (802.11ax), Bluetooth 5.3\n  \n  \t-    Windows 11 Home\n  \n  \t-    microSD Memory Card Reader",
+      "list_anh": [
+        "Products/Yoga 7 14IML9 14&quot; 2-in-1 Laptop Computer - Storm Grey_0.jpg",
+        "Products/Yoga 7 14IML9 14&quot; 2-in-1 Laptop Computer - Storm Grey_1.jpg",
+        "Products/Yoga 7 14IML9 14&quot; 2-in-1 Laptop Computer - Storm Grey_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "271",
+      "image": "Products/XPS 13 9345 Copilot+ PC 13.4&quot; Laptop Computer - Graphite.jpg",
+      "title": "XPS 13 9345 Copilot+ PC 13.4&quot; Laptop Computer - Graphite",
+      "price": "1799.99",
+      "description": "Key Features\n \n \n  \t-    Qualcomm Snapdragon X Elite Processor\n  \n  \t-    32GB LPDDR5X-8448 RAM\n  \n  \t-    Qualcomm Adreno Integrated Graphics\n  \n  \t-    1TB PCIe NVMe M.2 SSD\n  \n  \t-    13.4\" 3K OLED Touchscreen Display\n  \n  \t-    2x2 Wireless LAN WiFi 7 (802.11be), Bluetooth 5.4\n  \n  \t-    2.67 lbs. (1.21 kg)\n  \n  \t-    Windows 11 Pro",
+      "list_anh": [
+        "Products/XPS 13 9345 Copilot+ PC 13.4&quot; Laptop Computer - Graphite_0.jpg",
+        "Products/XPS 13 9345 Copilot+ PC 13.4&quot; Laptop Computer - Graphite_1.jpg",
+        "Products/XPS 13 9345 Copilot+ PC 13.4&quot; Laptop Computer - Graphite_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "272",
+      "image": "Products/EliteBook 845 G11 14&quot; Laptop Computer - Silver.jpg",
+      "title": "EliteBook 845 G11 14&quot; Laptop Computer - Silver",
+      "price": "639.99",
+      "description": "Key Features\n \n \n  \t-    AMD Ryzen 5 PRO 8640HS (3.5GHz) Processor\n  \n  \t-    16GB DDR5-5600 RAM\n  \n  \t-    AMD Radeon 760M Integrated Graphics\n  \n  \t-    512GB PCIe NVMe M.2 SSD\n  \n  \t-    14\" WUXGA IPS Touchscreen Display\n  \n  \t-    Wireless LAN WiFi 6E (802.11ax), Bluetooth 5.3\n  \n  \t-    3.12 lbs. (1.42 kg)\n  \n  \t-    Windows 11 Pro",
+      "list_anh": [
+        "Products/EliteBook 845 G11 14&quot; Laptop Computer - Silver_0.jpg",
+        "Products/EliteBook 845 G11 14&quot; Laptop Computer - Silver_1.jpg",
+        "Products/EliteBook 845 G11 14&quot; Laptop Computer - Silver_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "273",
+      "image": "Products/ThinkPad P16s Gen 3 Mobile Workstation 16&quot; Laptop Computer - Black.jpg",
+      "title": "ThinkPad P16s Gen 3 Mobile Workstation 16&quot; Laptop Computer - Black",
+      "price": "1379.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core Ultra 7 155H (1.4GHz) Processor\n  \n  \t-    16GB DDR5-5600 RAM\n  \n  \t-    NVIDIA RTX 500 Ada Graphics Card\n  \n  \t-    1TB PCIe Gen4 SSD\n  \n  \t-    16\" WQUXGA IPS Anti-Glare Display\n  \n  \t-    Gigabit LAN, 2x2 WiFi 6E (802.11ax), Bluetooth 5.3\n  \n  \t-    4.00 lbs. (1.81 kg)\n  \n  \t-    Windows 11 Pro",
+      "list_anh": [
+        "Products/ThinkPad P16s Gen 3 Mobile Workstation 16&quot; Laptop Computer - Black_0.jpg",
+        "Products/ThinkPad P16s Gen 3 Mobile Workstation 16&quot; Laptop Computer - Black_1.jpg",
+        "Products/ThinkPad P16s Gen 3 Mobile Workstation 16&quot; Laptop Computer - Black_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "274",
+      "image": "Products/EliteBook 840 G10 14&quot; Laptop Computer - Silver.jpg",
+      "title": "EliteBook 840 G10 14&quot; Laptop Computer - Silver",
+      "price": "629.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core i5 1335U (1.3GHz) Processor\n  \n  \t-    16GB RAM\n  \n  \t-    Intel Iris Xe Integrated Graphics\n  \n  \t-    512GB PCIe NVMe M.2 SSD\n  \n  \t-    14\" WUXGA IPS Touchscreen Display\n  \n  \t-    Wireless LAN WiFi 6E (802.11ax), Bluetooth 5.3\n  \n  \t-    Windows 11 Pro",
+      "list_anh": [
+        "Products/EliteBook 840 G10 14&quot; Laptop Computer - Silver_0.jpg",
+        "Products/EliteBook 840 G10 14&quot; Laptop Computer - Silver_1.jpg",
+        "Products/EliteBook 840 G10 14&quot; Laptop Computer - Silver_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "275",
+      "image": "Products/XPS 13 9350 Copilot+ PC 13.4&quot; Laptop Computer - Platinum.jpg",
+      "title": "XPS 13 9350 Copilot+ PC 13.4&quot; Laptop Computer - Platinum",
+      "price": "1999.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core Ultra 7 258V (2.2GHz) Processor\n  \n  \t-    32GB LPDDR5X-8533 RAM\n  \n  \t-    Intel Arc Integrated Graphics\n  \n  \t-    1TB PCIe NVMe M.2 SSD\n  \n  \t-    13.4\" 3K OLED Touchscreen Display\n  \n  \t-    2x2 Wireless LAN WiFi 7 (802.11be), Bluetooth 5.4\n  \n  \t-    2.59 lbs. (1.17 kg)\n  \n  \t-    Windows 11 Pro",
+      "list_anh": [
+        "Products/XPS 13 9350 Copilot+ PC 13.4&quot; Laptop Computer - Platinum_0.jpg",
+        "Products/XPS 13 9350 Copilot+ PC 13.4&quot; Laptop Computer - Platinum_1.jpg",
+        "Products/XPS 13 9350 Copilot+ PC 13.4&quot; Laptop Computer - Platinum_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "276",
+      "image": "Products/Vivobook S 14 S5406SA-MH77 14&quot; Laptop Computer - Mist Blue.jpg",
+      "title": "Vivobook S 14 S5406SA-MH77 14&quot; Laptop Computer - Mist Blue",
+      "price": "1249.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core Ultra 7 258V (2.2GHz) Processor\n  \n  \t-    32GB LPDDR5x RAM\n  \n  \t-    Intel Arc Integrated Graphics\n  \n  \t-    1TB PCIe Gen4 x4 NVMe M.2 SSD\n  \n  \t-    14\" WUXGA OLED Glossy Display\n  \n  \t-    2x2 Wireless LAN WiFi 7 (802.11be), Bluetooth 5.4\n  \n  \t-    Windows 11 Pro\n  \n  \t-    microSD Memory Card Reader",
+      "list_anh": [
+        "Products/Vivobook S 14 S5406SA-MH77 14&quot; Laptop Computer - Mist Blue_0.jpg",
+        "Products/Vivobook S 14 S5406SA-MH77 14&quot; Laptop Computer - Mist Blue_1.jpg",
+        "Products/Vivobook S 14 S5406SA-MH77 14&quot; Laptop Computer - Mist Blue_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "277",
+      "image": "Products/ThinkPad P16v Gen Mobile Workstation 16&quot; Laptop Computer - Black.jpg",
+      "title": "ThinkPad P16v Gen Mobile Workstation 16&quot; Laptop Computer - Black",
+      "price": "1079.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core Ultra 7 155H (1.4GHz) Processor\n  \n  \t-    16GB DDR5-5600 RAM\n  \n  \t-    Intel Arc Integrated Graphics\n  \n  \t-    512GB PCIe Gen4 M.2 SSD\n  \n  \t-    16\" WUXGA IPS Anti-Glare Display\n  \n  \t-    2x2 Wireless LAN WiFi 6E (802.11ax), Bluetooth 5.3\n  \n  \t-    4.90 lbs. (2.22 kg)\n  \n  \t-    Windows 11 Pro",
+      "list_anh": [
+        "Products/ThinkPad P16v Gen Mobile Workstation 16&quot; Laptop Computer - Black_0.jpg",
+        "Products/ThinkPad P16v Gen Mobile Workstation 16&quot; Laptop Computer - Black_1.jpg",
+        "Products/ThinkPad P16v Gen Mobile Workstation 16&quot; Laptop Computer - Black_2.jpg"
+      ],
+      "category": "Laptop"
+    },
+    {
+      "id": "278",
+      "image": "Products/Nitro 50 N50-656-UR12 Gaming PC.jpg",
+      "title": "Nitro 50 N50-656-UR12 Gaming PC",
+      "price": "749.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core i5 14400F (1.8GHz) Processor\n  \n  \t-    16GB DDR5-5600 RAM\n  \n  \t-    NVIDIA GeForce RTX 3050 Graphics Card\n  \n  \t-    1TB PCIe M.2 NVMe Gen4 SSD\n  \n  \t-    2.5GbE LAN, 2x2 WiFi 6E (802.11ax), Bluetooth 5.3\n  \n  \t-    Windows 11 Home",
+      "list_anh": [
+        "Products/Nitro 50 N50-656-UR12 Gaming PC_0.jpg",
+        "Products/Nitro 50 N50-656-UR12 Gaming PC_1.jpg",
+        "Products/Nitro 50 N50-656-UR12 Gaming PC_2.jpg"
+      ],
+      "category": "PC"
+    },
+    {
+      "id": "279",
+      "image": "Products/Codex R2 C12TA-418US Gaming PC.jpg",
+      "title": "Codex R2 C12TA-418US Gaming PC",
+      "price": "699.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core i5 12400F (2.5GHz) Processor\n  \n  \t-    16GB DDR5-6000 RAM\n  \n  \t-    NVIDIA GeForce RTX 3050 Graphics Card\n  \n  \t-    500GB SSD\n  \n  \t-    2.5GbE LAN, WiFi 6E (802.11ax), Bluetooth 5.2\n  \n  \t-    Windows 11 Home",
+      "list_anh": [
+        "Products/Codex R2 C12TA-418US Gaming PC_0.jpg",
+        "Products/Codex R2 C12TA-418US Gaming PC_1.jpg",
+        "Products/Codex R2 C12TA-418US Gaming PC_2.jpg"
+      ],
+      "category": "PC"
+    },
+    {
+      "id": "280",
+      "image": "Products/Nitro 60 N60-640-UR11 Gaming PC.jpg",
+      "title": "Nitro 60 N60-640-UR11 Gaming PC",
+      "price": "1199.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core i5 14400F (1.8GHz) Processor\n  \n  \t-    16GB DDR5 RAM\n  \n  \t-    NVIDIA GeForce RTX 4060 Graphics Card\n  \n  \t-    1TB PCIe M.2 NVMe Gen4 SSD\n  \n  \t-    Gigabit LAN, 2x2 WiFi 5 (802.11ac), Bluetooth 4.2\n  \n  \t-    Windows 11 Home",
+      "list_anh": [
+        "Products/Nitro 60 N60-640-UR11 Gaming PC_0.jpg",
+        "Products/Nitro 60 N60-640-UR11 Gaming PC_1.jpg",
+        "Products/Nitro 60 N60-640-UR11 Gaming PC_2.jpg"
+      ],
+      "category": "PC"
+    },
+    {
+      "id": "281",
+      "image": "Products/ROG NUC 970 RN14SRKU9189AUI Full System Mini PC.jpg",
+      "title": "ROG NUC 970 RN14SRKU9189AUI Full System Mini PC",
+      "price": "1699.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core Ultra 9 185H (2.3GHz) Processor\n  \n  \t-    32GB DDR5-5600 RAM\n  \n  \t-    NVIDIA GeForce RTX 4070 Graphics Card\n  \n  \t-    1TB PCIe M.2 NVMe Gen4x4 SSD\n  \n  \t-    2.5GbE LAN, 2x2 WiFi 6E (802.11ax), Bluetooth 5.3\n  \n  \t-    Windows 11 Home",
+      "list_anh": [
+        "Products/ROG NUC 970 RN14SRKU9189AUI Full System Mini PC_0.jpg",
+        "Products/ROG NUC 970 RN14SRKU9189AUI Full System Mini PC_1.jpg",
+        "Products/ROG NUC 970 RN14SRKU9189AUI Full System Mini PC_2.jpg"
+      ],
+      "category": "PC"
+    },
+    {
+      "id": "282",
+      "image": "Products/Gamer Xtreme GXi4600M PC.jpg",
+      "title": "Gamer Xtreme GXi4600M PC",
+      "price": "1099.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core i5 14400F (1.8GHz) Processor\n  \n  \t-    32GB DDR5-6000 RAM\n  \n  \t-    Intel Arc B580 Graphics Card\n  \n  \t-    1TB PCIe M.2 NVMe Gen4 SSD\n  \n  \t-    Gigabit LAN, WiFi 5 (802.11ac), Bluetooth 4.2\n  \n  \t-    Windows 11 Home",
+      "list_anh": [
+        "Products/Gamer Xtreme GXi4600M PC_0.jpg",
+        "Products/Gamer Xtreme GXi4600M PC_1.jpg",
+        "Products/Gamer Xtreme GXi4600M PC_2.jpg"
+      ],
+      "category": "PC"
+    },
+    {
+      "id": "283",
+      "image": "Products/Aegis SE 13TA-1233US Gaming PC.jpg",
+      "title": "Aegis SE 13TA-1233US Gaming PC",
+      "price": "779.99",
+      "description": "Key Features\n \n \n  \t-    Intel Core i5 13400F (1.8GHz) Processor\n  \n  \t-    16GB DDR5-6000 RAM\n  \n  \t-    NVIDIA GeForce RTX 3050 Graphics Card\n  \n  \t-    500GB SSD\n  \n  \t-    WiFi 6E (802.11ax), Bluetooth 5.2\n  \n  \t-    Windows 11 Home",
+      "list_anh": [
+        "Products/Aegis SE 13TA-1233US Gaming PC_0.jpg",
+        "Products/Aegis SE 13TA-1233US Gaming PC_1.jpg",
+        "Products/Aegis SE 13TA-1233US Gaming PC_2.jpg"
+      ],
+      "category": "PC"
+    },
+    {
+      "id": "284",
+      "image": "Products/MITTLED LED kitchen cntrtp lighting strip, dimmable white, 15 inch.jpg",
+      "title": "MITTLED LED kitchen cntrtp lighting strip, dimmable white, 15 inch",
+      "price": "20.0",
+      "description": "The lighting enhances both function and atmosphere in your kitchen and makes working in the kitchen less of a chore. Easy to install – no electrician needed.",
+      "list_anh": [
+        "Products/MITTLED LED kitchen cntrtp lighting strip, dimmable white, 15 inch_0.jpg",
+        "Products/MITTLED LED kitchen cntrtp lighting strip, dimmable white, 15 inch_1.jpg",
+        "Products/MITTLED LED kitchen cntrtp lighting strip, dimmable white, 15 inch_2.jpg"
+      ],
+      "category": "LED Lighting"
+    },
+    {
+      "id": "285",
+      "image": "Products/VATTENSTEN LED light strip, white, 39 inch.jpg",
+      "title": "VATTENSTEN LED light strip, white, 39 inch",
+      "price": "7.99",
+      "description": "With this LED lighting strip, you can unleash your creativity and decorate with light in all kinds of places in your home – above cabinets, by the TV or under the sofa. The possibilities are endless!",
+      "list_anh": [
+        "Products/VATTENSTEN LED light strip, white, 39 inch_0.jpg",
+        "Products/VATTENSTEN LED light strip, white, 39 inch_1.jpg",
+        "Products/VATTENSTEN LED light strip, white, 39 inch_2.jpg"
+      ],
+      "category": "LED Lighting"
+    },
+    {
+      "id": "286",
+      "image": "Products/MITTLED LED spotlight, dimmable white.jpg",
+      "title": "MITTLED LED spotlight, dimmable white",
+      "price": "15.0",
+      "description": "Show off your beloved dinnerware collection. The lighting enhances the atmosphere and gives a good overview of things inside your cabinets. Easy to install on your own – no electrician needed.",
+      "list_anh": [
+        "Products/MITTLED LED spotlight, dimmable white_0.jpg",
+        "Products/MITTLED LED spotlight, dimmable white_1.jpg",
+        "Products/MITTLED LED spotlight, dimmable white_2.jpg"
+      ],
+      "category": "LED Lighting"
+    },
+    {
+      "id": "287",
+      "image": "Products/ÖVERSIDAN LED wardrobe lighting strp w sensor, dimmable white, 38 inch.jpg",
+      "title": "ÖVERSIDAN LED wardrobe lighting strp w sensor, dimmable white, 38 inch",
+      "price": "28.0",
+      "description": "Dark in the wardrobe? Something easily solved with this modern LED light strip with a built-in sensor that is customized for PAX wardrobes.",
+      "list_anh": [
+        "Products/ÖVERSIDAN LED wardrobe lighting strp w sensor, dimmable white, 38 inch_0.jpg",
+        "Products/ÖVERSIDAN LED wardrobe lighting strp w sensor, dimmable white, 38 inch_1.jpg",
+        "Products/ÖVERSIDAN LED wardrobe lighting strp w sensor, dimmable white, 38 inch_2.jpg"
+      ],
+      "category": "LED Lighting"
+    },
+    {
+      "id": "288",
+      "image": "Products/KAPPLAKE LED spotlight, white.jpg",
+      "title": "KAPPLAKE LED spotlight, white",
+      "price": "3.49",
+      "description": "It's easy to mount KAPPLAKE spotlight with the included sticky gel-pad anywhere you like. The gel pad is easy to roll-off by hand, wash with water and reattach to the lamp.",
+      "list_anh": [
+        "Products/KAPPLAKE LED spotlight, white_0.jpg",
+        "Products/KAPPLAKE LED spotlight, white_1.jpg",
+        "Products/KAPPLAKE LED spotlight, white_2.jpg"
+      ],
+      "category": "LED Lighting"
     }
   ],
   "cartItems": []
