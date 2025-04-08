@@ -84,6 +84,7 @@ async function getCartItems() {
       totalPrice: totalPrice,
     };
     await postData(data);
+    alert("Added products to the cart");
   };
 
   const handleRating = (rate) => console.log("Rated:", rate);

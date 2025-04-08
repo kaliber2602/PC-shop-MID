@@ -3602,5 +3602,24 @@
       "category": "LED Lighting"
     }
   ],
-  "cartItems": []
+  "cartItems": [
+    {
+      "id": "5",
+      "product_id": "2",
+      "image": "/Products/ProMounts Large Tabletop TV Stand (VESA 400x400) PMSA4401.jpg",
+      "title": "ProMounts Large Tabletop TV Stand (VESA 400x400) PMSA4401",
+      "price": 64.99,
+      "quantity": 1,
+      "totalPrice": 64.99
+    },
+    {
+      "id": "6",
+      "product_id": "3",
+      "image": "/Products/B-Tech Neomounts Full Motion Desk Mount (Single) FPMA-D550BLACK.jpg",
+      "title": "B-Tech Neomounts Full Motion Desk Mount (Single) FPMA-D550BLACK",
+      "price": 86,
+      "quantity": 1,
+      "totalPrice": 86
+    }
+  ]
 }

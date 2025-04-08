@@ -12,6 +12,9 @@ const DetailBody = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [lastCartItemId, setLastCartItemId] = useState(0);
 
+  const increaseQty = () => setQuantity((prev) => prev + 1);
+  const decreaseQty = () => setQuantity((prev) => Math.max(1, prev - 1));
+
   const handleQuantityChange = (event) => {
     const value = parseInt(event.target.value, 10);
     setQuantity(value < 1 ? 1 : value);
@@ -118,6 +121,7 @@ const DetailBody = ({ product }) => {
       totalPrice: totalPrice,
     };
     await postData(data);
+    alert("Added products to the cart");
   };
 
 
@@ -152,16 +156,27 @@ const DetailBody = ({ product }) => {
                 <span className="text-danger h1">${product.price}</span>
               </p>
 
-              <p>
-                <strong>Quantity:</strong>
-                <input
-                  type="number"
-                  value={quantity}
-                  min="1"
-                  className="form-control-inline w-2"
-                  onChange={handleQuantityChange}
-                />
-              </p>
+              <div className="d-flex align-items-center mb-3">
+                                <strong className="me-2">Quantity:</strong>
+                
+                                <button
+                                    className="btn btn-outline-secondary px-3"
+                                    onClick={decreaseQty}
+                                >−</button>
+                                <input
+                                    type="number"
+                                    value={quantity}
+                                    min="1"
+                                    className="form-control mx-2 text-center"
+                                    style={{ width: "80px" }}
+                                    onChange={handleQuantityChange}
+                                />
+                                <button
+                                    className="btn btn-outline-secondary px-3"
+                                    onClick={increaseQty}
+                                >+</button>
+
+              </div>
               <button
                 className="btn btn-dark"
                 onClick={() => addToCart(product.id, product.image, product.title, product.price, quantity)}
@@ -169,6 +184,12 @@ const DetailBody = ({ product }) => {
                 Add to cart
               </button>
             </div>
+
+            {/* Quantity Selector */}
+            
+                                
+                            
+
 
             <div className="content-wrapper d-flex flex-column" style={{
               display: "flex",

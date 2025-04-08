@@ -187,7 +187,7 @@ const Cart_popup = () => {
 
   return (
     <div className="cart-container">
-      <div id="cart-popup" className="cart-popup" onClick={toggleCart}>
+      <div  id="cart-popup" className="cart-popup col-lg-8 col-xl-8 col-md-6 col-sm-12" onClick={toggleCart}>
         <Badge count={cartItems.length}>
           <ShoppingCartOutlined className="cart-icon" />
         </Badge>

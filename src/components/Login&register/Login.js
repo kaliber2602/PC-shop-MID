@@ -5,13 +5,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import ToastNotification from "./ToastNotification";
 import { useNavigate } from "react-router-dom";
+
 const Login = ({ onLoginSuccess }) => {
+
+  const mockAccounts = [
+    { userName: "admin", password: "12345" },
+    { userName: "testuser", password: "test123" },
+  ];
+
+
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     userName: "",
     password: "",
   });
   const [toast, setToast] = useState(null);
+
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -66,11 +76,29 @@ const Login = ({ onLoginSuccess }) => {
       return;
     }
 
+    // Kiểm tra tài khoản trong danh sách giả
+    const matchedAccount = mockAccounts.find(
+      (acc) =>
+        acc.userName === formData.userName &&
+        acc.password === formData.password
+    );
 
-    setTimeout(() => {
-      onLoginSuccess();
-      navigate("/", { state: { showWelcome: true } }); // Truyền flag
-    }, 2000);
+    if (matchedAccount) {
+      setToast({ type: "success", message: "Login successful!" });
+
+      setTimeout(() => {
+
+
+        if (matchedAccount.userName === "admin") {
+          navigate("/dashboard", { state: { showWelcome: true } });
+        } else {
+          navigate("/", { state: { showWelcome: true } });
+          onLoginSuccess();
+        }
+      }, 1000);
+    } else {
+      setToast({ type: "danger", message: "Invalid username or password!" });
+    }
   };
 
   return (
