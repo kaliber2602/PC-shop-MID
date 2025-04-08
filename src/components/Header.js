@@ -16,14 +16,14 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
     try {
       const response = await fetch("http://localhost:3000/products/");
       const Products = await response.json();
-      const formattedProducts = Products.map(product => ({
+      const formattedProducts = Products.map((product) => ({
         id: Number(product.id),
         image: product.image,
         title: product.title,
         price: product.price,
         description: product.description,
         list_anh: product.list_anh,
-        category: product.category
+        category: product.category,
       }));
       return formattedProducts;
     } catch (error) {
@@ -33,11 +33,10 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
   }
 
   useEffect(() => {
-    getProducts().then(fetchedProducts => {
+    getProducts().then((fetchedProducts) => {
       setProducts(fetchedProducts);
     });
   }, []);
-  
 
   const handleSearchClick = () => {
     const query = searchQuery.trim().toLowerCase();
@@ -58,13 +57,12 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
   const handleAuthClick = () => {
     if (isLoggedIn) {
       setIsLoggedIn(false); // Đăng xuất
-      alert("Log out successfully")
-      navigate("/");        // Có thể chuyển về trang chủ
+      alert("Log out successfully");
+      navigate("/"); // Có thể chuyển về trang chủ
     } else {
-      navigate("/Login");   // Chuyển đến trang đăng nhập
+      navigate("/Login"); // Chuyển đến trang đăng nhập
     }
   };
-
 
   return (
     <>
@@ -82,7 +80,9 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
         <div className="container shadow bg-dark text-white">
           <div className="row w-100">
             <div className="logo_container col-lg-1 col-xl-1 col-md-2 col-sm-2 p-3">
-              <img src={logo} className="logo_image" alt="Logo" />
+              <NavLink className="nav-link" to="/">
+                <img src={logo} className="logo_image" alt="Logo" />
+              </NavLink>
             </div>
 
             <div className="Search_box col-lg-6 col-xl-6 col-md-8 col-sm-8 d-flex container-fluid p-2">
@@ -93,7 +93,10 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button className="Search_button col-lg-2 col-xl-2 col-md-4 col-sm-4 p-2" onClick={handleSearchClick}>
+              <button
+                className="Search_button col-lg-2 col-xl-2 col-md-4 col-sm-4 p-2"
+                onClick={handleSearchClick}
+              >
                 Search
               </button>
             </div>
@@ -136,8 +139,10 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
                         </NavLink>
                       </li>
                       <li className="nav-item">
-                      <button
-                          className={`nav-link bg-transparent border-0 ${isLoggedIn ? 'text-danger' : ''}`}
+                        <button
+                          className={`nav-link bg-transparent border-0 ${
+                            isLoggedIn ? "text-danger" : ""
+                          }`}
                           onClick={handleAuthClick}
                         >
                           <b>{isLoggedIn ? "Logout" : "Login"}</b>
@@ -154,7 +159,10 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
 
       {showOverlay && (
         <div className="search-overlay" onClick={() => setShowOverlay(false)}>
-          <div className="search-results-container" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="search-results-container"
+            onClick={(e) => e.stopPropagation()}
+          >
             <ul className="list-group">
               {filteredResults.map((item) => (
                 <li
@@ -163,7 +171,11 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
                   onClick={() => handleSelectProduct(item.id)}
                   style={{ cursor: "pointer" }}
                 >
-                  <img src={item.image} alt={item.name} className="suggestion-image me-2" />
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="suggestion-image me-2"
+                  />
                   {item.title}
                 </li>
               ))}
