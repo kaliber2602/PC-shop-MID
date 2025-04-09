@@ -1,7 +1,54 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-const Menu = () => {
+
+const Menu = ({ onSelectCategory }) => {
+  const handleCategoryClick = (category) => {
+    onSelectCategory(category);
+  };
+
+  const menuItems = [
+    { title: "PC & Laptop", subItems: ["PC", "Laptop"] },
+    {
+      title: "PC Components",
+      subItems: [
+        "CPU",
+        "GPU (Graphics Card)",
+        "RAM",
+        "SSD & HDD (Storage)",
+        "PSU (Power Supply Unit)",
+        "Motherboard",
+        "Cooling Solutions",
+      ],
+    },
+    { title: "Monitors" },
+    {
+      title: "Mechanical Keyboards & Accessories",
+      subItems: ["Mechanical Keyboards", "Keycap Sets"],
+    },
+    {
+      title: "Mice & Mousepads",
+      subItems: ["Gaming Mice", "Mousepads"],
+    },
+    {
+      title: "Headphones & Speakers",
+      subItems: ["Headphones", "Speakers"],
+    },
+    {
+      title: "Chairs & Desks",
+      subItems: ["Chairs", "Desks"],
+    },
+    {
+      title: "Other Accessories",
+      subItems: [
+        "Cables & Adapters",
+        "Hubs & Docking Stations",
+        "LED Lighting",
+        "Stands & Mounts",
+      ],
+    },
+  ];
+
   return (
     <div className="col-lg-2 col-xl-2 col-sm-12 col-md-12 mb-4 menu">
       <h1
@@ -20,27 +67,48 @@ const Menu = () => {
 
       {menuItems.map((item, index) => (
         <div key={index} className="dropdown show p-2 rounded mb-0">
-          <a
-            className="btn btn-secondary col-12 dropdown-toggle"
-            href="#"
-            role="button"
-            id={`dropdownMenuLink-${index}`}
-            data-bs-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {item.title}
-          </a>
+          {item.subItems ? (
+            <button
+              className="btn btn-secondary col-12 dropdown-toggle"
+              type="button" // Required for buttons to clarify their role
+              id={`dropdownMenuLink-${index}`}
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style={{
+                whiteSpace: "normal",
+                wordWrap: "break-word",
+                overflowWrap: "break-word",
+              }}
+            >
+              {item.title}
+              <span className="ms-2">
+                <i className="bi bi-chevron-down"></i>
+              </span>
+            </button>
+          ) : (
+            <button
+              className="btn btn-secondary col-12"
+              onClick={() => handleCategoryClick(item.title)}
+              style={{
+                whiteSpace: "normal",
+                wordWrap: "break-word",
+                overflowWrap: "break-word",
+              }}
+            >
+              {item.title}
+            </button>
+          )}
 
           {item.subItems && (
-            <div
-              className="dropdown-menu"
-              aria-labelledby={`dropdownMenuLink-${index}`}
-            >
+            <div className="dropdown-menu" aria-labelledby={`dropdownMenuLink-${index}`}>
               {item.subItems.map((subItem, subIndex) => (
-                <a key={subIndex} className="dropdown-item" href="#">
+                <button
+                  key={subIndex}
+                  className="dropdown-item"
+                  onClick={() => handleCategoryClick(subItem)}
+                >
                   {subItem}
-                </a>
+                </button>
               ))}
             </div>
           )}
@@ -50,46 +118,6 @@ const Menu = () => {
   );
 };
 
-const menuItems = [
-  { title: "PC & Laptop", subItems: ["PC", "Laptop"] },
-  {
-    title: "Linh kiện PC",
-    subItems: [
-      "CPU",
-      "GPU (Card đồ họa)",
-      "RAM",
-      "SSD & HDD (Ổ cứng)",
-      "PSU (Nguồn máy tính)",
-      "Bo mạch chủ (Motherboard)",
-      "Tản nhiệt (Cooling Solutions)",
-    ],
-  },
-  { title: "Màn hình (Monitors)" },
-  {
-    title: "Bàn phím cơ & Phụ kiện",
-    subItems: ["Action", "Another action", "Something else here"],
-  },
-  {
-    title: "Mice & Mousepads",
-    subItems: ["Action", "Another action", "Something else here"],
-  },
-  {
-    title: "Headphones & Speakers",
-    subItems: ["Action", "Another action", "Something else here"],
-  },
-  {
-    title: "Gaming Chairs & Desks",
-    subItems: ["Action", "Another action", "Something else here"],
-  },
-  {
-    title: "Other Accessories",
-    subItems: [
-      "Cables & Adapters",
-      "Hubs & Docking Stations",
-      "LED Lighting",
-      "Stands & Mounts",
-    ],
-  },
-];
+
 
 export default Menu;

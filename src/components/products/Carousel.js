@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-const Carousel = () => {
+const Carousel = ({ images }) => {
   return (
     <div
       id="carouselExampleIndicators"
@@ -10,27 +10,14 @@ const Carousel = () => {
       data-bs-ride="carousel"
     >
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img
-            className="d-block w-100"
-            src="Products/inner_1.jpg"
-            alt="First slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block w-100"
-            src="Products/inner2.jpg"
-            alt="Second slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block w-100"
-            src="Products/inner_3.jpg"
-            alt="Third slide"
-          />
-        </div>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`carousel-item ${index === 0 ? "active" : ""}`}
+          >
+            <img className="d-block w-100" src={`/${image}`} alt={`Slide ${index + 1}`} />
+          </div>
+        ))}
       </div>
       <button
         className="carousel-control-prev"

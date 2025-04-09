@@ -3,24 +3,34 @@ import React from "react";
 const About_body = () => {
   return (
     <section>
-      <div className="container col-lg-10 col-xl-10">
-        <div className="row">
-          <div className="col-12 col-sm-12 col-lg-12 p-3 rounded-lg overflow-hidden">
-            <img
-              className="w-100 rounded-top rounded-bottom"
-              src="about_image.jpg"
-              alt="About Us Image"
-            />
+      <div className="container col-lg-10 col-xl-10 d-flex justify-content-center">
+        <div className="row justify-content-center w-100 mt-3">
+          <div className="col-lg-4 col-xl-4 col-md-12 col-sm-12 rounded-lg text-center p-3">
+            <img src="/avatars/Thang.jpg" alt="Image 1" className="img-fluid rounded-circle w-50" />
+            <h1>Nguyen Quoc Thang</h1>
+            <h2>+0906395035</h2>
+            <p>523H0094@student.tdtu.edu.vn</p>
           </div>
+          <div className="col-lg-4 col-xl-4 col-md-12 col-sm-12 rounded-lg text-center p-3">
+            <img src="/avatars/Thuan.jpg" alt="Image 2" className="img-fluid  rounded-circle w-50" />
+            <h1>Ngo Chi Thuan</h1>
+            <h2>+987654321</h2>
+            <p>523H0102@student.tdtu.edu.vn</p>
+          </div>
+          <div className="col-lg-4 col-xl-4 col-md-12 col-sm-12 rounded-lg text-center p-3">
+            <img src="/avatars/Hai.jpg" alt="Image 3" className="img-fluid  rounded-circle w-50" />
+            <h1>Vu Thanh Hai</h1>
+            <h2>+112233445</h2>
+            <p>523H0022@student.tdtu.edu.vn</p>
+          </div>
+
         </div>
       </div>
 
+
       <div className="container col-lg-10 col-xl-10">
-        <p className="bg-secondary rounded pt-3 pb-3 mb-3 text-white text-center">
-          Hãy khám phá bộ sưu tập của chúng tôi – nơi các sản phẩm decor đẹp mắt
-          và chất lượng cao được chọn lọc kỹ càng, giúp bạn thỏa sức thể hiện
-          phong cách và cá tính riêng. Đừng chỉ là người sống trong không gian,
-          hãy là người tạo dựng nên không gian của chính bạn!
+        <p className="bg-secondary rounded pt-3 pb-3 mb-3 text-white text-center" style={{ padding: "5px", textAlign: "center" }}>
+          Explore our collection – where beautiful and high-quality decor products are carefully selected to help you express your unique style and personality. Don't just live in a space, be the one who creates the space of your own!
         </p>
       </div>
 
@@ -38,7 +48,7 @@ const About_body = () => {
                 </p>
               </div>
               <div className="card-footer text-left">
-                <button className="btn btn-primary rounded">Learn More</button>
+
               </div>
             </div>
           </div>
@@ -55,9 +65,7 @@ const About_body = () => {
                 </p>
               </div>
               <div className="card-footer text-left">
-                <button className="btn btn-primary rounded">
-                  Explore Our Values
-                </button>
+
               </div>
             </div>
           </div>
