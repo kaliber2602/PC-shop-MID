@@ -34,16 +34,11 @@ const Menu = () => {
                     <li className="menu-item">
                         <FaBox className="menu-icon" /> Product List
                     </li>
+                    {/* Bo xung them chuc lang */}
                     <li className="menu-item">
-                        <FaUserCog className="menu-icon" /> Account Management
+                        <FaBox className="menu-icon" /> Order Management
                     </li>
-                    <li className="menu-item">
-                        <FaMoneyBillWave className="menu-icon" /> Revenue Management
-                    </li>
-                    <li className="menu-item">
-                        <FaBox className="menu-icon" /> Product List
-                    </li>
-
+                    
                     <li className="menu-item">
                         <FaUserAlt className="menu-icon" /> User Profile
                     </li>

@@ -16,9 +16,13 @@ const Contact_body = () => {
       .then(
         () => {
           console.log('SUCCESS!');
+          const form = document.getElementById("contact-form");
+          form.reset();
+          alert("Sent gmail to Decor Dream Team");
         },
         (error) => {
           console.log('FAILED...', error.text);
+          alert("Something went wrong!");
         },
       );
   };
