@@ -8,37 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 const Login = ({ onLoginSuccess }) => {
 
-  const [users, setUsers] = useState([]);
-  async function getUsers() {
-    try {
-        const response = await fetch("http://localhost:3000/users/");
-        const Users = await response.json();
-        const FormattedUsers = Users.map(user => ({
-              id: user.id,
-              user_name: user.user_name,
-              first_name: user.first_name,
-              last_name: user.last_name,
-              phone_number: user.phone_number,
-              address: user.address,
-              email: user.email,
-              password: user.password,
-              gender: user.gender,
-              admin: user.admin
-        }));
-        return FormattedUsers;
-    } catch (error) {
-        console.error("Error when fetch users:", error);
-        return [];
-    }
-}
-
-    useEffect(() => {
-        getUsers().then(fetchedUsers => {
-            setUsers(fetchedUsers);
-        });
-    }, []);
-  
-
 
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -84,11 +53,11 @@ const Login = ({ onLoginSuccess }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let hasError = false;
     const fields = ["userName", "password"];
-
+  
     fields.forEach((field) => {
       handleValidation(field);
       const inputElement = document.getElementById(field);
@@ -96,37 +65,42 @@ const Login = ({ onLoginSuccess }) => {
         hasError = true;
       }
     });
-
+  
     if (hasError) {
       setToast({ type: "danger", message: "Please fix errors before submitting!" });
       return;
     }
-
-    // Kiểm tra tài khoản trong danh sách giả
-    const matchedAccount = users.find(
-      (acc) =>
-        acc.user_name === formData.userName &&
-        acc.password === formData.password
-    );
-
-    if (matchedAccount) {
-      setToast({ type: "success", message: "Login successful!" });
-
-      setTimeout(() => {
-
-
-        if (matchedAccount.admin === true) {
-          navigate("/dashboard", { state: { showWelcome: true } });
-        } else {
-          navigate("/", { state: { showWelcome: true } });
-          onLoginSuccess();
-        }
-      }, 1000);
-    } else {
-      setToast({ type: "danger", message: "Invalid username or password!" });
+  
+    try {
+      const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_name: formData.userName,
+          password: formData.password,
+        }),
+      });
+  
+      const result = await response.json();
+  
+      if (result.success) {
+        setToast({ type: "success", message: "Login successful!" });
+        setTimeout(() => {
+          if (result.admin) {
+            navigate("/dashboard", { state: { showWelcome: true } });
+          } else {
+            navigate("/", { state: { showWelcome: true } });
+            onLoginSuccess();
+          }
+        }, 1000);
+      } else {
+        setToast({ type: "danger", message: result.message });
+      }
+    } catch (error) {
+      setToast({ type: "danger", message: "Error connecting to server!" });
     }
   };
-
+  
   return (
     <div className="container-fluid">
       <div className="row">

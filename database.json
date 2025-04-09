@@ -2,6 +2,18 @@
   "users": [
     {
       "id": "1",
+      "user_name": "admin",
+      "first_name": "admin",
+      "last_name": "admin",
+      "phone_number": "093110129",
+      "address": "Vietnam",
+      "email": "Hello@gmail.com",
+      "password": "12345",
+      "gender": "male",
+      "admin": true
+    },
+    {
+      "id": "2",
       "user_name": "layongrass",
       "first_name": "Thuan",
       "last_name": "Ngo Chi",
