@@ -66,6 +66,39 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
 
   return (
     <>
+    <style>{`
+header {
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 10px 0 !important;
+}
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
+
+.search-results-container {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+      `
+      }
+      </style>
+   
+      
       <header
         style={{
           position: "sticky",
