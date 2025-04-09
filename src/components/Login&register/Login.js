@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Login.css";
 import logo from "./Logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,10 +8,36 @@ import { useNavigate } from "react-router-dom";
 
 const Login = ({ onLoginSuccess }) => {
 
-  const mockAccounts = [
-    { userName: "admin", password: "12345" },
-    { userName: "testuser", password: "test123" },
-  ];
+  const [users, setUsers] = useState([]);
+  async function getUsers() {
+    try {
+        const response = await fetch("http://localhost:3000/users/");
+        const Users = await response.json();
+        const FormattedUsers = Users.map(user => ({
+              id: user.id,
+              user_name: user.user_name,
+              first_name: user.first_name,
+              last_name: user.last_name,
+              phone_number: user.phone_number,
+              address: user.address,
+              email: user.email,
+              password: user.password,
+              gender: user.gender,
+              admin: user.admin
+        }));
+        return FormattedUsers;
+    } catch (error) {
+        console.error("Error when fetch users:", error);
+        return [];
+    }
+}
+
+    useEffect(() => {
+        getUsers().then(fetchedUsers => {
+            setUsers(fetchedUsers);
+        });
+    }, []);
+  
 
 
   const navigate = useNavigate();
@@ -77,9 +103,9 @@ const Login = ({ onLoginSuccess }) => {
     }
 
     // Kiểm tra tài khoản trong danh sách giả
-    const matchedAccount = mockAccounts.find(
+    const matchedAccount = users.find(
       (acc) =>
-        acc.userName === formData.userName &&
+        acc.user_name === formData.userName &&
         acc.password === formData.password
     );
 
@@ -89,7 +115,7 @@ const Login = ({ onLoginSuccess }) => {
       setTimeout(() => {
 
 
-        if (matchedAccount.userName === "admin") {
+        if (matchedAccount.admin === true) {
           navigate("/dashboard", { state: { showWelcome: true } });
         } else {
           navigate("/", { state: { showWelcome: true } });
