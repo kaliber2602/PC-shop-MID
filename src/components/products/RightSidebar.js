@@ -4,7 +4,7 @@ const RightSidebar = () => {
   return (
     <div className="col-lg-2 col-xl-2 d-none d-lg-block sidebar">
       <img
-        src="/Products/bg_body - Copy.jpg"
+        src="Products/bg_body - Copy.jpg"
         className="img-fluid"
         alt="Left Sidebar"
       />

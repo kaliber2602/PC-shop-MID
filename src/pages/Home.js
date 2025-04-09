@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import Home_body from "../components/Home_body";
 import Footer from "../components/Footer";
-const Home = ({ isLoggedIn, setIsLoggedIn }) => {
+const Home = () => {
   return (
     <>
-      <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Header />
       <Home_body />
       <Footer />
     </>

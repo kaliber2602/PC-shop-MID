@@ -2,12 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About_body from "../components/About_body";
-const About = ({ isLoggedIn, setIsLoggedIn }) => {
-
-
+const About = () => {
   return (
     <>
-      <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Header />
       <About_body />
       <Footer />
     </>

@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact_body from "../components/Contact_body";
-const Contact = ({ isLoggedIn, setIsLoggedIn }) => {
+const Contact = () => {
   return (
     <>
-      <Header  isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+      <Header />
       <Contact_body />
       <Footer />
     </>

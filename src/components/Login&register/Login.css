@@ -66,8 +66,6 @@
   transition: background-color 1s;
   place-content: center;
   border: none;
-  justify-content: flex-end; 
- 
 }
 
 .form-control {
@@ -76,25 +74,14 @@
 
 .forgot-password{
   text-align: left;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+.create-account{
+  text-align: right;
+  padding-right: 0;
+  padding-left: 0 ;
+  margin-right: 0;
 }
 
-
-/* Thêm style cho các input khi hợp lệ và không hợp lệ */
-.invalid-input {
-  background-color: #f8d7da !important;
-  border-color: #dc3545 !important;
-}
-
-.valid-input {
-  background-color: #d4edda !important;
-  border-color: #28a745 !important;
-}
-
-/* Chỉnh màu cho nút logout */
-.logout-red {
-  color: red;
-  font-weight: bold;
-}
 
